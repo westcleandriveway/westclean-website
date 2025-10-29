@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WestClean Driveway Care — Blacktown Driveway Cleaning</title>
+  <meta name="description" content="WestClean Driveway Care — Professional driveway cleaning, pressure washing and sealing in Blacktown & Western Sydney. Fast, local, insured.">
+  <style>
+    /* VARIABLES & BASE STYLES */
+    :root{
+        --blue: #0A3D62;
+        --green: #2ECC71;
+        --muted: #666;
+        --maxw: 960px;
+        --light-bg: #f7fbff;
+        --border-color: #e6eef5;
+    }
+    body{
+        font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+        margin:0;
+        color:#111;
+        background-color: #fff;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
+    h1, h2, h3 { color: var(--blue); }
+    h1{margin:0;font-size:1.5rem}
+    p.lead{color:var(--muted);margin:6px 0 14px}
+
+    /* HEADER & NAVIGATION */
+    header{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+    .header-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    /* LOGO STYLES - NOW USING IMAGE */
+    .logo{
+        width: 100px; /* Set max size for the logo container */
+        height: 100px;
+        flex-shrink:0;
+    }
+    .logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px; /* Added rounded corners to logo image */
+    }
+    .cta{margin-left:auto;text-align:right;}
+    .topline{display:flex;gap:12px;align-items:center}
+    .phone{font-weight:800;color:var(--blue)}
+    .tag{background:#e9f8ee;color:#137642;padding:6px 8px;border-radius:8px;font-weight:700;font-size:0.8rem;}
+
+    /* NAVIGATION BAR */
+    nav{
+        border-top:1px solid var(--border-color);
+        border-bottom:1px solid var(--border-color);
+        padding: 10px 0;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    nav a{
+        text-decoration: none;
+        color: var(--blue);
+        font-weight: 600;
+        padding: 5px 0;
+        transition: color 0.2s;
+    }
+    nav a:hover{color:var(--green)}
+    nav a.active{border-bottom: 2px solid var(--green); color: #111;}
+
+    /* BUTTONS & CARDS */
+    .btn{
+        background:var(--green);
+        color:#063 !important;
+        display:inline-block; /* Makes it respect text-align: right and flow correctly */
+        padding:10px 16px;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:700;
+        transition: background-color 0.2s;
+    }
+    .btn:hover{background:#28b463;}
+    .hero-banner{background:var(--light-bg);border-radius:12px;padding:18px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:24px;align-items:center}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .card{border:1px solid var(--border-color);padding:16px;border-radius:8px;background:#fff;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);}
+    .card-highlight{background:var(--green);color:#fff;border-color:#137642;}
+    .card-highlight strong{color:#fff;}
+    .card-highlight .small{color:rgba(255, 255, 255, 0.9);}
+
+    /* UTILITIES */
+    .muted{color:var(--muted)}
+    .small{font-size:0.9rem}
+    .featurelist{margin:8px 0 0;padding-left:18px}
+
+    /* GALLERY STYLES */
+    .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:12px}
+    .photo-container{
+        border:1px solid var(--border-color);
+        padding: 10px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px; 
+    }
+    .photo-caption{font-size:0.85rem; color:var(--blue); margin-top:8px; font-weight:600;}
+
+    /* FORM STYLES */
+    input, textarea{
+        padding:12px;
+        border-radius:8px;
+        border:1px solid #ddd;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    textarea{resize:vertical;}
+    .form-group{margin-bottom: 12px;}
+
+    /* FOOTER */
+    footer{margin-top:30px;padding-top:16px;border-top:1px solid #eee;color:var(--muted)}
+
+    /* RESPONSIVENESS */
+    @media(min-width:720px){
+        h1{font-size:2rem}
+        .header-top{flex-wrap:nowrap;}
+        .topline{font-size:0.9rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="logo.png" alt="WestClean Driveway Care Logo">
+            </div>
+            <div style="flex-grow: 1;">
+                <div class="topline small"><strong>WestClean Driveway Care</strong> <span class="tag">Local • Insured</span></div>
+                <h1>Blacktown's Professional Driveway Cleaning Experts</h1>
+                <p class="lead">Restore your home's curb appeal with professional pressure washing, stain removal & surface sealing in Western Sydney.</p>
+            </div>
+            <div class="cta">
+                <div class="small muted" style="text-align:right;">Call for a free quote</div>
+                <a class="btn" href="tel:0403079094" style="margin-top: 4px;">📞 0403 079 094</a>
+                <div class="small muted" style="text-align:right; margin-top: 6px;">Mon–Sat 8am–6pm</div>
+            </div>
+        </div>
+
+        <nav id="main-nav">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#services" class="nav-link">Our Services</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Get A Quote</a>
+        </nav>
+    </header>
+
+    <main id="app-content"></main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>WestClean Driveway Care</strong><br>
+          <span class="muted small">Serving Blacktown, Seven Hills, Kings Langley, Glenwood, Doonside & Western Sydney</span>
+        </div>
+        <div style="text-align:right">
+          <div class="phone">📞 0403 079 094</div>
+          <div class="small muted">Email: westcleandriveway@gmail.com</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // --- APP CONTENT TEMPLATES ---
+
+    // 1. HOME PAGE TEMPLATE
+    const homeContent = `
+        <section class="hero-banner" aria-labelledby="home-services-title">
+            <div style="flex:1 1 360px">
+                <h2 id="home-services-title">Our Core Driveway Services</h2>
+                <div class="services-grid">
+                    <div class="card">
+                        <strong>Pressure Clean</strong>
+                        <div class="small muted">Concrete, pavers, exposed aggregate</div>
+                        <p class="small">Starting from <strong>$99</strong>. Removes mould, dirt, tyre marks and weather stains.</p>
+                    </div>
+                    <div class="card">
+                        <strong>Surface Sealing</strong>
+                        <div class="small muted">Protective coatings</div>
+                        <p class="small">Sealing from <strong>$8/m²</strong> to protect against stains and prolong life.</p>
+                    </div>
+                    <div class="card">
+                        <strong>Stain Removal</strong>
+                        <div class="small muted">Oil, grease & rust treatments</div>
+                        <p class="small">Professional degreasing for lasting results and complete stain eradication.</p>
+                    </div>
+                    <div class="card">
+                        <strong>Pathway Pack</strong>
+                        <div class="small muted">Bundle pricing</div>
+                        <p class="small">Driveway + Path package from <strong>$199</strong> (popular with new customers).</p>
+                    </div>
+                </div>
+
+                <div style="margin-top:20px">
+                    <h3 class="small" style="color:#111; margin-bottom: 5px;">Why Choose WestClean?</h3>
+                    <ul class="featurelist small">
+                        <li>**Local Blacktown Experts** — Fast, friendly, and reliable crew.</li>
+                        <li>**Insured & Professional** — Commercial-grade equipment for superior results.</li>
+                        <li>**Transparent Pricing** — Free quotes with no hidden fees, guaranteed.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside style="width:260px; flex-shrink: 0;">
+                <div class="card card-highlight">
+                    <strong style="font-size: 1.1rem; color: #063;">New Customer Special</strong>
+                    <p class="small" style="margin-top: 5px; margin-bottom: 12px;">Driveway + Path Package **$199** – Get your whole entrance looking brand new!</p>
+                    <a class="btn" href="#contact" style="background:#fff; color: var(--blue) !important; width: 100%; text-align: center;">Claim Offer Now</a>
+                    <div style="margin-top:15px; border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 10px;">
+                        <div class="muted small" style="color:rgba(255, 255, 255, 0.8);">Service Areas</div>
+                        <div class="small" style="color:#fff; font-weight: 500;">Blacktown, Seven Hills, Doonside, Glenwood, The Ponds, Kings Langley & more</div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px" class="card">
+                    <strong>Trusted by Locals</strong>
+                    <p class="small">⭐⭐⭐⭐⭐ "Fast, professional — our concrete driveway looks brand new! Couldn't recommend WestClean more." — **Jane P, Blacktown**</p>
+                </div>
+            </aside>
+        </section>
+    `;
+
+    // 2. SERVICES PAGE TEMPLATE
+    const servicesContent = `
+        <section>
+            <h2>Our Professional Driveway Cleaning Services</h2>
+            <p class="lead">We use professional-grade equipment, targeted techniques, and local expertise to restore and protect your surfaces right here in **Blacktown and Western Sydney**.</p>
+            
+            <div class="services-grid">
+                <div class="card">
+                    <h3 style="margin-top: 0; color: var(--green);">Driveway Pressure Clean & Restoration</h3>
+                    <p class="small">The foundation of a great-looking home starts with a clean driveway. We lift years of embedded dirt, grime, mould, and unsightly tire marks that standard cleaning can’t touch.</p>
+                    <ul class="featurelist small">
+                        <li>**Concrete & Exposed Aggregate:** High-pressure rotary cleaning with pre-treatment.</li>
+                        <li>**Paver Cleaning:** Careful handling to clean thoroughly without damaging sand joints.</li>
+                        <li>**Results:** Removes mould, dirt, tyre marks and weathering.</li>
+                    </ul>
+                    <p style="text-align: right; margin-top: 15px;"><a href="#contact" class="btn small" style="padding: 8px 12px;">Get Started from $99</a></p>
+                </div>
+
+                <div class="card">
+                    <h3 style="margin-top: 0; color: var(--green);">Targeted Oil & Stain Removal</h3>
+                    <p class="small">Oil, grease, rust, and chemical spills can ruin a clean surface. Our targeted stain treatment goes beyond standard pressure washing to remove the spot completely.</p>
+                    <ul class="featurelist small">
+                        <li>**Professional Degreasing:** High-strength agents break down heavy oil and automotive fluids.</li>
+                        <li>**Rust & Efflorescence:** Specific, surface-safe treatments to remove challenging red and white stains.</li>
+                        <li>**The Difference:** We ensure the stain is *removed*, not just lightened.</li>
+                    </ul>
+                    <p style="text-align: right; margin-top: 15px;"><a href="#contact" class="btn small" style="padding: 8px 12px;">Request Stain Removal</a></p>
+                </div>
+
+                <div class="card" style="grid-column: span 2; background: var(--light-bg);">
+                    <h3 style="margin-top: 0; color: var(--blue);">Surface Sealing – The Ultimate Protection</h3>
+                    <p class="small">After deep cleaning, a professional seal is the best way to maintain your investment. Sealing keeps your driveway looking new for longer and is highly recommended.</p>
+                    <div style="display: flex; gap: 20px; margin-top: 15px;">
+                        <ul class="featurelist small" style="flex: 1;">
+                            <li>**Stain Resistance:** Repels oil, grease, and chemicals.</li>
+                            <li>**Inhibits Growth:** Drastically reduces mould, mildew, and moss return.</li>
+                        </ul>
+                        <ul class="featurelist small" style="flex: 1;">
+                            <li>**Prevents Damage:** Protects against weathering and UV fading.</li>
+                            <li>**Enhanced Look:** Choose a natural or 'wet look' finish to enrich the colour.</li>
+                        </ul>
+                    </div>
+                    <p style="text-align: center; margin-top: 20px;"><strong style="color:var(--green);">Sealing from $8/m²</strong> | <a href="#contact" class="btn" style="padding: 10px 20px;">Protect Your Driveway Now</a></p>
+                </div>
+            </div>
+        </section>
+    `;
+
+    // 3. GALLERY PAGE TEMPLATE (REFERENCES UPLOADED FILES using .png)
+    const galleryContent = `
+        <section>
+            <h2>Driveway Transformations: Before & After</h2>
+            <p class="lead">See the dramatic difference WestClean makes! Three recent transformation examples from the Blacktown area.</p>
+
+            <div class="photos">
+                <div class="photo-container">
+                    <div class="photo">
+                        <img src="1.png" alt="Before and After driveway cleaning showing removal of heavy grime.">
+                    </div>
+                    <div class="photo-caption">Driveway Restoration - Heavy Grime Removal (Blacktown)</div>
+                </div>
+                
+                <div class="photo-container">
+                    <div class="photo">
+                        <img src="3.png" alt="Driveway before and after, showing removal of moss and mould.">
+                    </div>
+                    <div class="photo-caption">Residential Driveway - Complete Mould and Moss Removal (Seven Hills)</div>
+                </div>
+
+                <div class="photo-container">
+                    <div class="photo">
+                        <img src="2.png" alt="Pathway before and after cleaning, showing removal of heavy moss.">
+                    </div>
+                    <div class="photo-caption">Pathway Cleaning - Moss and Weathering Gone (Kings Langley)</div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; text-align: center;"><a href="#contact" class="btn">Ready for your transformation? Get a Quote!</a></p>
+        </section>
+    `;
+
+    // 4. ABOUT US PAGE TEMPLATE
+    const aboutContent = `
+        <section>
+            <h2>About WestClean Driveway Care</h2>
+            <p class="lead">**The Local Choice in Blacktown and Western Sydney**</p>
+            
+            <p>WestClean Driveway Care isn't a national franchise—we are a family-owned and operated local business proudly serving the **Blacktown community** and surrounding Western Sydney suburbs. Our mission is simple: to help our neighbours boost their property's curb appeal and protect their biggest investment with professional, reliable service.</p>
+
+            <h3 style="margin-top: 25px;">Why Choose a Local Expert?</h3>
+            <p class="small muted">We live and work in the area, meaning we understand the specific challenges your driveways face—from the harsh Australian sun to the build-up of mould and traffic grime unique to our environment.</p>
+
+            <div style="display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
+                <div class="card" style="flex: 1 1 250px;">
+                    <strong>Local Knowledge Advantage</strong>
+                    <p class="small">We know the common driveway materials used across Blacktown, Seven Hills, and Kings Langley, allowing us to choose the most effective cleaning and sealing methods every time.</p>
+                </div>
+                <div class="card" style="flex: 1 1 250px;">
+                    <strong>Fully Insured & Professional</strong>
+                    <p class="small">We are fully **insured** for your peace of mind and only use commercial-grade equipment and eco-friendly cleaning solutions. We guarantee the highest quality finish.</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; text-align: center; font-weight: 600;">When you choose WestClean, you're not just hiring a contractor; you're supporting a local Blacktown business committed to making our community shine.</p>
+
+        </section>
+    `;
+
+    // 5. CONTACT PAGE TEMPLATE
+    const contactContent = `
+        <section>
+            <h2>Get a Free, Fast Quote</h2>
+            <p class="lead">Tell us about your driveway and we'll give a transparent price estimate. No obligation, no hidden fees.</p>
+            
+            <form id="quoteForm" action="#" onsubmit="handleQuoteSubmit(event)">
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:12px;">
+                    <div class="form-group"><input required placeholder="Your Full Name" type="text"></div>
+                    <div class="form-group"><input required placeholder="Phone Number" type="tel"></div>
+                    <div class="form-group"><input required placeholder="Email Address" type="email"></div>
+                    <div class="form-group"><input required placeholder="Suburb (e.g., Blacktown, Seven Hills)" type="text"></div>
+                </div>
+                
+                <div class="form-group" style="margin-top:8px;">
+                    <textarea placeholder="Describe your driveway: material (concrete, pavers?), size (single/double car?), and main issues (mould, oil stains?)" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group" style="margin-top:8px; display: flex; justify-content: space-between; align-items: center;">
+                    <button class="btn" style="border:none">Submit Quote Request</button>
+                    <div class="small muted">We aim to respond within 2 hours during business hours.</div>
+                </div>
+            </form>
+
+            <h3 style="margin-top: 30px;">Direct Contact Information</h3>
+            <div style="display:flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center;">
+                <div class="card" style="flex: 1 1 200px;">
+                    <strong style="color: var(--blue);">Call Us Now</strong>
+                    <div style="font-size: 1.2rem; margin: 5px 0;"><a href="tel:0403079094" style="color: var(--green); text-decoration: none;">0403 079 094</a></div>
+                    <div class="small muted">Mon–Sat: 8:00 AM – 6:00 PM</div>
+                </div>
+                <div class="card" style="flex: 1 1 200px;">
+                    <strong style="color: var(--blue);">Email Us</strong>
+                    <div style="font-size: 1.2rem; margin: 5px 0;"><a href="mailto:westcleandriveway@gmail.com" style="color: var(--green); text-decoration: none;">westcleandriveway@gmail.com</a></div>
+                    <div class="small muted">Send us photos for a faster estimate!</div>
+                </div>
+            </div>
+            
+            <div id="quote-message" style="margin-top: 20px; padding: 10px; border-radius: 8px; background-color: #f0f0f0; display: none; text-align: center;"></div>
+        </section>
+    `;
+
+    // --- JAVASCRIPT ROUTING LOGIC ---
+
+    const routes = {
+        '': homeContent, // Default to home
+        'home': homeContent,
+        'services': servicesContent,
+        'gallery': galleryContent,
+        'about': aboutContent,
+        'contact': contactContent
+    };
+
+    const contentDiv = document.getElementById('app-content');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const defaultHash = '#home';
+
+    function renderPage() {
+        const hash = window.location.hash.substring(1) || 'home';
+        const pageContent = routes[hash] || homeContent; // Fallback to home
+
+        // Update main content
+        contentDiv.innerHTML = pageContent;
+
+        // Update active navigation link state
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + hash) {
+                link.classList.add('active');
+            }
+        });
+
+        // Scroll to top of page content
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Handle form submission (for demo purposes)
+    function handleQuoteSubmit(event) {
+        event.preventDefault();
+        const messageDiv = document.getElementById('quote-message');
+        messageDiv.style.display = 'block';
+        messageDiv.innerHTML = '<strong>Thank you!</strong> Your quote request has been received. A WestClean representative will be in touch shortly.';
+        // In a real application, you would send this data to a server endpoint here.
+        console.log('Quote request submitted.');
+    }
+
+    // Assign the form handler to the global scope for the HTML to access it
+    window.handleQuoteSubmit = handleQuoteSubmit;
+
+    // Listen for hash changes (user clicks links)
+    window.addEventListener('hashchange', renderPage);
+
+    // Initial load (page first loads)
+    window.onload = function() {
+        if (!window.location.hash) {
+            window.location.hash = defaultHash;
+        }
+        renderPage();
+    };
+  </script>
+</body>
+</html>
