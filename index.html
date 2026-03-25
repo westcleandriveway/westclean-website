@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WestClean Driveway Cleaning | Blacktown NSW</title>
+    <title>WestClean | Driveway Cleaning Blacktown NSW</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
     <style>
         :root {
-            --primary: #007bff;
-            --primary-hover: #0056b3;
+            --primary: #0066cc;
+            --primary-hover: #004d99;
             --dark: #1a1a1a;
-            --light: #f8f9fa;
-            --grey: #6c757d;
+            --light: #f9f9f9;
             --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6; 
             color: var(--dark);
             scroll-behavior: smooth;
@@ -34,114 +34,107 @@
             position: sticky; 
             top: 0; 
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .logo { font-size: 1.6rem; font-weight: 800; }
         .logo span { color: var(--primary); }
         .nav-links { list-style: none; display: flex; gap: 25px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Hero Section */
+        /* Hero Section - The Banner */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200');
+            /* This is where the driveway cleaning image is added */
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('https://images.unsplash.com/photo-1621905252507-b354bcadc8bc?q=80&w=1200&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             color: var(--white); 
-            padding: 120px 0; 
+            padding: 140px 0; 
             text-align: center; 
         }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 20px; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; max-width: 700px; margin-inline: auto; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.3rem; margin-bottom: 35px; max-width: 800px; margin-inline: auto; }
 
         /* Buttons */
         .btn-primary { 
             background: var(--primary); 
             color: var(--white); 
-            padding: 14px 28px; 
+            padding: 15px 30px; 
             text-decoration: none; 
-            border-radius: 5px; 
-            display: inline-block;
+            border-radius: 4px; 
             font-weight: bold;
-            transition: background 0.3s;
+            transition: 0.3s;
             border: none;
             cursor: pointer;
         }
-        .btn-primary:hover { background: var(--primary-hover); }
+        .btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); }
+        
         .btn-secondary { 
             border: 2px solid var(--white); 
             color: var(--white); 
-            padding: 12px 26px; 
+            padding: 13px 28px; 
             text-decoration: none; 
-            border-radius: 5px; 
-            margin-left: 10px;
+            border-radius: 4px; 
+            margin-left: 15px;
             font-weight: bold;
-            transition: all 0.3s;
+            transition: 0.3s;
         }
         .btn-secondary:hover { background: var(--white); color: var(--dark); }
 
-        /* Sections General */
-        section { padding: 80px 0; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.2rem; margin-bottom: 10px; }
-        .section-title p { color: var(--grey); }
-
-        /* Features/Services Grid */
+        /* Services Grid */
+        section { padding: 90px 0; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--dark); }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { 
             background: var(--white); 
             padding: 40px; 
-            border-radius: 12px; 
+            border-radius: 8px; 
             text-align: center; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            border: 1px solid #f1f1f1;
+            box-shadow: var(--shadow);
+            border-bottom: 4px solid var(--primary);
         }
-        .card:hover { transform: translateY(-5px); }
         .card i { color: var(--primary); margin-bottom: 20px; }
-        .card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+        .card h3 { margin-bottom: 15px; }
 
-        /* Process Steps */
-        .steps { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; margin-top: 40px; }
-        .step { text-align: center; flex: 1; min-width: 200px; }
-        .step span { 
-            display: flex; align-items: center; justify-content: center;
-            background: var(--primary); color: var(--white); 
-            width: 50px; height: 50px; border-radius: 50%; 
-            font-weight: bold; font-size: 1.2rem; margin: 0 auto 20px; 
-        }
-
-        /* Gallery Placeholder */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        /* Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .gallery-item { 
-            aspect-ratio: 1/1; 
-            background: #ddd; 
+            height: 250px; 
+            background: #e0e0e0; 
             border-radius: 8px; 
             display: flex; 
             align-items: center; 
             justify-content: center;
-            color: #888;
-            font-weight: bold;
+            font-style: italic;
+            color: #666;
+            overflow: hidden;
         }
 
-        /* Contact Form */
-        .contact-container { max-width: 700px; margin: auto; background: var(--light); padding: 40px; border-radius: 12px; }
-        .contact-form { display: flex; flex-direction: column; gap: 15px; }
-        .contact-form input, .contact-form textarea { 
-            padding: 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; width: 100%;
+        /* Contact Section */
+        #contact { background: var(--light); }
+        .contact-form { 
+            max-width: 600px; 
+            margin: auto; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: var(--shadow);
         }
-        .contact-form textarea { height: 120px; resize: vertical; }
+        .form-group { margin-bottom: 20px; }
+        .form-group input, .form-group textarea { 
+            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;
+        }
+        .form-group textarea { height: 120px; }
 
-        /* Footer */
-        footer { background: var(--dark); color: var(--white); padding: 40px 0; text-align: center; }
-        .footer-info { margin-bottom: 20px; opacity: 0.8; }
-
-        /* Mobile Adjustments */
+        footer { background: #111; color: white; padding: 50px 0; text-align: center; }
+        
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Simplified for demo - usually a burger menu here */
-            .hero h1 { font-size: 2rem; }
-            .btn-secondary { margin-left: 0; margin-top: 10px; display: inline-block; }
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            .btn-secondary { display: block; margin: 15px auto 0; width: fit-content; }
         }
     </style>
 </head>
@@ -154,107 +147,58 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact" class="btn-primary" style="padding: 8px 15px; color: white;">Get Quote</a></li>
+                <li><a href="#contact">Get a Quote</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="container">
-            <h1>Expert Driveway Cleaning <br>in Blacktown</h1>
-            <p>Restore your home's exterior with our professional high-pressure cleaning services. Serving Western Sydney with pride.</p>
+            <h1>Professional Driveway Cleaning</h1>
+            <p>We use high-pressure technology to strip away years of dirt, grime, and oil stains. Proudly serving Blacktown and Western Sydney homeowners.</p>
             <div class="hero-btns">
-                <a href="#contact" class="btn-primary">Book Free Quote</a>
-                <a href="#services" class="btn-secondary">View Our Services</a>
+                <a href="#contact" class="btn-primary">Get Your Free Quote</a>
+                <a href="#services" class="btn-secondary">Our Services</a>
             </div>
         </div>
     </header>
 
-    <section id="features">
+    <section id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Why Residents Choose WestClean</h2>
-                <p>Reliable service. Professional results. Local pride.</p>
+                <h2>Our Specialised Services</h2>
+                <p>Pure restoration through professional pressure washing.</p>
             </div>
             <div class="grid">
                 <div class="card">
-                    <i data-lucide="map-pin" size="40"></i>
-                    <h3>Local to Blacktown</h3>
-                    <p>We are a locally owned business focused on serving our neighbors in Blacktown and surrounding suburbs.</p>
+                    <i data-lucide="droplets" size="48"></i>
+                    <h3>Driveway Washing</h3>
+                    <p>High-pressure cleaning for concrete, stencilled, and paved driveways. We remove oil, mold, and tire marks.</p>
                 </div>
                 <div class="card">
-                    <i data-lucide="zap" size="40"></i>
-                    <h3>Commercial Grade</h3>
-                    <p>We use industrial-strength pressure washers that clear away grime that household units can't touch.</p>
+                    <i data-lucide="home" size="48"></i>
+                    <h3>Pathway Restoration</h3>
+                    <p>Clean your garden paths and walkways to prevent slips and improve the look of your landscape.</p>
                 </div>
                 <div class="card">
-                    <i data-lucide="check-circle" size="40"></i>
-                    <h3>100% Satisfaction</h3>
-                    <p>We don't leave until you're happy with the result. Our reputation in Western Sydney is everything.</p>
+                    <i data-lucide="layers" size="48"></i>
+                    <h3>Patio & Deck Cleaning</h3>
+                    <p>Safe and effective cleaning for backyard entertainment areas, sandstone, and pavers.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" style="background: var(--light);">
+    <section id="gallery" style="background: #fff;">
         <div class="container">
             <div class="section-title">
-                <h2>Our Cleaning Specialties</h2>
-                <p>We handle all types of hard surfaces without the need for harsh chemicals.</p>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <h3>Concrete Driveways</h3>
-                    <p>Removal of oil stains, tire marks, and moss from plain or colored concrete.</p>
-                </div>
-                <div class="card">
-                    <h3>Pavers & Stencil-crete</h3>
-                    <p>Deep cleaning for textured surfaces to bring back their original vibrant color.</p>
-                </div>
-                <div class="card">
-                    <h3>Patio & Pool Areas</h3>
-                    <p>Safe cleaning for sandstone and tile areas, making them slip-resistant and fresh.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>How It Works</h2>
-            </div>
-            <div class="steps">
-                <div class="step">
-                    <span>1</span>
-                    <h3>Free Quote</h3>
-                    <p>Contact us for a quick, no-obligation price based on your driveway size.</p>
-                </div>
-                <div class="step">
-                    <span>2</span>
-                    <h3>Deep Clean</h3>
-                    <p>Our team arrives on time and performs a thorough high-pressure wash.</p>
-                </div>
-                <div class="step">
-                    <span>3</span>
-                    <h3>The Reveal</h3>
-                    <p>A final rinse and inspection to ensure your home looks brand new.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Work</h2>
-                <p>Real results from jobs across Blacktown and Western Sydney.</p>
+                <h2>The WestClean Difference</h2>
+                <p>Check out our recent transformations across Blacktown.</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item">Before & After 1</div>
-                <div class="gallery-item">Before & After 2</div>
-                <div class="gallery-item">Before & After 3</div>
-                <div class="gallery-item">Before & After 4</div>
+                <div class="gallery-item">Concrete Driveway: Before/After</div>
+                <div class="gallery-item">Stencil-Crete: Before/After</div>
+                <div class="gallery-item">Brick Paver: Before/After</div>
             </div>
         </div>
     </section>
@@ -262,35 +206,36 @@
     <section id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Request Your Free Quote</h2>
-                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                <h2>Request a Free Quote</h2>
+                <p>No hidden fees. Just honest, local service in Blacktown.</p>
             </div>
-            <div class="contact-container">
-                <form class="contact-form">
-                    <input type="text" placeholder="Full Name" required>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Full Name" required>
+                </div>
+                <div class="form-group">
                     <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
                     <input type="text" placeholder="Phone Number" required>
-                    <input type="text" placeholder="Suburb (e.g. Blacktown, Seven Hills)" required>
-                    <textarea placeholder="Tell us about the job (e.g. 2 car driveway, heavy oil stains)"></textarea>
-                    <button type="submit" class="btn-primary">Send My Request</button>
-                </form>
-            </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tell us about your driveway (Size, type of stains, etc.)"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Submit Request</button>
+            </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="logo" style="color: white; margin-bottom: 20px;">West<span>Clean</span></div>
-            <div class="footer-info">
-                <p>Professional Exterior Cleaning Services</p>
-                <p>Blacktown, NSW 2148</p>
-            </div>
-            <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2024 WestClean. No sealing services provided—specializing in pure high-pressure restoration.</p>
+            <p><strong>WestClean Driveway Cleaning</strong></p>
+            <p>Serving Blacktown, NSW and surrounding areas</p>
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">&copy; 2024. Focused exclusively on professional pressure cleaning. No sealing services provided.</p>
         </div>
     </footer>
 
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
     </script>
 </body>
