@@ -8,6 +8,7 @@
     <style>
         :root {
             --primary-blue: #2563eb;
+            --vibrant-blue: #0070f3; /* NEW: More vibrant/visible blue */
             --deep-blue: #1e40af;
             --soft-blue: #eff6ff;
             --slate: #475569;
@@ -63,9 +64,25 @@
         .hero h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; }
         .hero p { font-size: 1.25rem; margin-bottom: 35px; max-width: 750px; margin-inline: auto; opacity: 0.95; font-weight: 400; }
 
-        /* BUTTONS */
-        .btn-primary { background: var(--primary-blue); color: white; padding: 16px 36px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; border: none; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3); }
-        .btn-primary:hover { background: var(--deep-blue); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); }
+        /* UPDATED VIBRANT BUTTONS */
+        .btn-primary { 
+            background: var(--vibrant-blue); 
+            color: white; 
+            padding: 16px 36px; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            display: inline-block; 
+            border: none; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            box-shadow: 0 4px 14px 0 rgba(0, 112, 243, 0.39); 
+        }
+        .btn-primary:hover { 
+            background: #0056b3; 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(0, 112, 243, 0.45); 
+        }
         .btn-secondary { background: var(--white); color: var(--dark); padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; margin-left: 12px; display: inline-block; transition: 0.3s; border: 1px solid var(--border-color); }
         .btn-secondary:hover { background: #f1f5f9; border-color: #cbd5e1; }
 
@@ -98,12 +115,11 @@
             transition: 0.3s;
         }
         .card h3 { color: var(--dark); font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
-        .price { font-size: 2.75rem; font-weight: 800; color: var(--primary-blue); margin: 20px 0; }
-        .card-highlight { border: 2px solid var(--primary-blue); position: relative; }
-
+        .price { font-size: 2.75rem; font-weight: 800; color: var(--vibrant-blue); margin: 20px 0; }
+        
         /* REFER A FRIEND */
         .refer-box {
-            background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+            background: linear-gradient(135deg, var(--vibrant-blue), var(--deep-blue));
             color: white;
             padding: 70px 40px;
             border-radius: 24px;
@@ -115,8 +131,7 @@
         #contact { background: var(--soft-blue); }
         .contact-box { max-width: 650px; margin: auto; background: white; padding: 50px; border-radius: 24px; box-shadow: var(--shadow-md); }
         .contact-form input, .contact-form textarea { width: 100%; padding: 16px; margin-bottom: 20px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 1rem; }
-        #success-msg { display: none; text-align: center; color: var(--primary-blue); background: var(--soft-blue); padding: 30px; border-radius: 16px; }
-
+        
         footer { background: var(--dark); color: #94a3b8; padding: 80px 0; text-align: center; }
         
         @media (max-width: 768px) {
@@ -138,7 +153,7 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#locations">Service Areas</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact" class="btn-primary" style="padding: 12px 24px; font-size: 0.9rem;">Get Quote</a></li>
+                <li><a href="#contact" class="btn-primary" style="padding: 12px 24px; font-size: 0.9rem; background: var(--vibrant-blue);">Get Quote</a></li>
             </ul>
         </div>
     </nav>
@@ -163,7 +178,7 @@
                 <p>We use commercial-grade equipment to lift years of oil stains, tyre marks, and mould that standard garden hoses can't touch. We are fully insured and committed to being the most reliable trade service in your neighborhood.</p>
             </div>
             <div class="about-image">
-                <img src="Shiny driveway and suburban home.png" alt="Pristine driveway and suburban home">
+                <img src="Shiny driveway and suburban home.jpg" alt="Pristine driveway and suburban home">
             </div>
         </div>
     </section>
@@ -177,20 +192,19 @@
             <div class="location-grid">
                 <div class="location-info">
                     <h3 style="color: var(--dark); margin-bottom: 20px;">Western Sydney Specialists</h3>
-                    <p>Based in Blacktown, we extend our services to all neighboring suburbs including Seven Hills, Glenwood, Kings Langley, and the wider Penrith and Parramatta areas.</p>
                     <div class="suburb-list">
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Blacktown</div>
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Seven Hills</div>
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Glenwood</div>
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Kings Langley</div>
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Stanhope Gardens</div>
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> The Ponds</div>
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Quakers Hill</div>
-                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Schofields</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> Blacktown</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> Seven Hills</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> Glenwood</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> Kings Langley</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> Stanhope Gardens</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> The Ponds</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> Quakers Hill</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--vibrant-blue)"></i> Schofields</div>
                     </div>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106115.35644722513!2d150.81428585!3d-33.7719875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129910d6896261%3A0x5017d681632ad40!2sBlacktown%20NSW!5e0!3m2!1sen!2sau!4v1711450000000!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="http://googleusercontent.com/maps.google.com/4" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -205,10 +219,10 @@
                 <div class="card">
                     <h3>Standard Refresh</h3>
                     <div class="price">$99</div>
-                    <p>Perfect for single driveways and front entry paths. High-pressure wash included.</p>
+                    <p>Perfect for single driveways and front entry paths.</p>
                     <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Book Now</a>
                 </div>
-                <div class="card card-highlight">
+                <div class="card" style="border: 2px solid var(--vibrant-blue);">
                     <h3>Home Hero Bundle</h3>
                     <div class="price">$225</div>
                     <p><strong>BEST VALUE:</strong> Full Driveway, Front Path, and Back Patio clean. Plus <strong>2x Bins Cleaned FREE!</strong></p>
@@ -217,14 +231,14 @@
                 <div class="card">
                     <h3>Hygienic Bin Clean</h3>
                     <div class="price">$10<span>/bin</span></div>
-                    <p>Deep sanitizing internal wash with eco-friendly deodorizer. Stop the smells today.</p>
+                    <p>Deep sanitizing wash with eco-friendly deodorizer.</p>
                     <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Book Bins</a>
                 </div>
             </div>
 
             <div id="refer" class="refer-box">
                 <h2>Refer a Neighbour & Save 10%</h2>
-                <p>Refer a friend in Western Sydney and you both receive a discount on your next service.</p>
+                <p>Refer a friend in Western Sydney and you both receive a discount.</p>
                 <a href="#contact" class="btn-secondary" style="margin-left:0; border: none;">Get Referral Details</a>
             </div>
         </div>
@@ -234,9 +248,9 @@
         <div class="container">
             <div class="section-title"><h2>Our Recent Work</h2></div>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="1.png" alt="Driveway Before and After"><div class="gallery-cap">Driveway Restoration</div></div>
-                <div class="gallery-item"><img src="2.png" alt="Pathway Before and After"><div class="gallery-cap">Pathway Cleaning</div></div>
-                <div class="gallery-item"><img src="3.png" alt="Patio Before and After"><div class="gallery-cap">Patio Refresh</div></div>
+                <div class="gallery-item"><img src="1.png" alt="Driveway Before/After"><div class="gallery-cap">Driveway Restoration</div></div>
+                <div class="gallery-item"><img src="2.png" alt="Pathway Before/After"><div class="gallery-cap">Pathway Cleaning</div></div>
+                <div class="gallery-item"><img src="3.png" alt="Patio Before/After"><div class="gallery-cap">Patio Refresh</div></div>
             </div>
         </div>
     </section>
@@ -245,12 +259,16 @@
         <div class="container">
             <div class="section-title"><h2>Get a Free Quote</h2></div>
             <div class="contact-box">
-                <div id="success-msg"><h3>Thank You!</h3><p>We will contact you shortly.</p></div>
-                <form id="quoteForm" class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <input type="text" placeholder="Suburb" required>
-                    <textarea placeholder="Tell us what you need cleaned..." rows="4"></textarea>
+                <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="contact-form">
+                    <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
+                    
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="suburb" placeholder="Suburb" required>
+                    <textarea name="message" placeholder="Tell us what you need cleaned (e.g., Double driveway, 2 bins)..." rows="4" required></textarea>
+                    
+                    <input type="hidden" name="redirect" value="https://westcleandriveway.github.io/westclean-website/?#home">
+                    
                     <button type="submit" class="btn-primary" style="width: 100%;">Send Request</button>
                 </form>
             </div>
@@ -266,11 +284,6 @@
 
     <script>
         lucide.createIcons();
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            this.style.display = 'none';
-            document.getElementById('success-msg').style.display = 'block';
-        });
     </script>
 </body>
 </html>
