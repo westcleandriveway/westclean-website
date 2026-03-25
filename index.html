@@ -1,257 +1,280 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WestClean Driveway Care — Blacktown Pressure Washing</title>
-  <meta name="description" content="WestClean Driveway & Bin Care — Professional driveway cleaning, pressure washing, and hygienic wheelie bin cleaning in Blacktown.">
-  <style>
-    :root{
-        --blue: #0A3D62;
-        --green: #2ECC71;
-        --muted: #666;
-        --maxw: 960px;
-        --light-bg: #f7fbff;
-        --border-color: #e6eef5;
-        --red: #E74C3C;
-    }
-    body{
-        font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-        margin:0;
-        color:#111;
-        background-color: #fcfcfd; 
-    }
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
-    h1, h2, h3 { color: var(--blue); }
-    
-    /* HEADER & NAV */
-    header{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
-    .header-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-    .logo{width: 80px; height: 80px; flex-shrink:0;}
-    .logo img {width: 100%; height: auto; border-radius: 8px;}
-    
-    nav{border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color); padding: 10px 0; margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap;}
-    nav a{text-decoration: none; color: var(--blue); font-weight: 600; transition: 0.2s;}
-    nav a:hover{color:var(--green)}
-    nav a.active{border-bottom: 2px solid var(--green); color: #111;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WestClean Driveway Care — Blacktown Pressure Washing</title>
+    <meta name="description" content="WestClean Driveway & Bin Care — Professional driveway cleaning and hygienic wheelie bin cleaning in Blacktown. Fast, Eco-Friendly, Local.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+    <style>
+        :root {
+            --blue: #0A3D62;
+            --green: #2ECC71;
+            --muted: #666;
+            --maxw: 960px;
+            --light-bg: #f7fbff;
+            --border-color: #e6eef5;
+            --red: #E74C3C;
+            --white: #ffffff;
+        }
 
-    /* HERO BANNER WITH FIXED IMAGE */
-    .hero-banner{
-        background: linear-gradient(rgba(10, 61, 98, 0.8), rgba(10, 61, 98, 0.8)), 
-                    url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1000');
-        background-size: cover;
-        background-position: center;
-        border-radius: 12px;
-        padding: 40px 20px;
-        margin-bottom: 20px;
-        color: white;
-        text-align: center;
-    }
-    .hero-banner h2 { color: white; font-size: 2rem; margin-bottom: 10px; }
-    .hero-banner p { font-size: 1.1rem; opacity: 0.9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6; 
+            color: #111;
+            background-color: #fcfcfd; 
+            scroll-behavior: smooth;
+        }
 
-    /* CARDS & GRID */
-    .services-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:18px}
-    .card{border:1px solid var(--border-color); padding:20px; border-radius:8px; background:#fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);}
-    .card-highlight{background:var(--blue); color:#fff; text-align: center;}
-    .btn{background:var(--green); color:#fff !important; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block;}
-    
-    /* FAQ & SUBURBS */
-    .faq-item { background: #fff; margin-bottom: 10px; padding: 15px; border-radius: 8px; border-left: 4px solid var(--green); }
-    .suburb-tag { background: #eef2f5; padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; display: inline-block; margin: 4px; color: var(--blue); font-weight: 600; }
+        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-    footer{margin-top:30px; padding-top:16px; border-top:1px solid #eee; color:var(--muted)}
-    
-    /* FORM */
-    input, textarea{padding:12px; border-radius:8px; border:1px solid #ddd; width: 100%; margin-bottom: 10px;}
-    #thank-you-message { display: none; background: #e9f8ee; padding: 20px; border-radius: 8px; text-align: center; color: #137642; }
-  </style>
+        /* HEADER & NAVIGATION */
+        header { padding: 20px 0; background: var(--white); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; }
+        .header-top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 15px; }
+        .logo { width: 80px; height: 80px; flex-shrink: 0; }
+        .logo img { width: 100%; height: auto; border-radius: 8px; }
+        
+        .cta-header { margin-left: auto; text-align: right; }
+        .phone-link { font-weight: 800; color: var(--blue); text-decoration: none; font-size: 1.2rem; }
+
+        nav { display: flex; gap: 20px; flex-wrap: wrap; padding-top: 10px; border-top: 1px solid var(--border-color); }
+        nav a { text-decoration: none; color: var(--blue); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        nav a:hover { color: var(--green); }
+
+        /* HERO BANNER */
+        .hero { 
+            background: linear-gradient(rgba(10, 61, 98, 0.75), rgba(10, 61, 98, 0.75)), 
+                        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            padding: 80px 20px;
+            margin: 20px 0;
+            color: var(--white); 
+            text-align: center; 
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 15px; color: var(--white); }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; max-width: 700px; margin-inline: auto; }
+
+        /* SECTION STYLING */
+        section { padding: 60px 0; border-bottom: 1px solid var(--border-color); }
+        h2 { color: var(--blue); margin-bottom: 20px; font-size: 1.8rem; }
+        .lead { color: var(--muted); margin-bottom: 30px; font-size: 1.1rem; }
+
+        /* PRICING & SERVICES GRID */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { 
+            background: var(--white); 
+            padding: 25px; 
+            border-radius: 8px; 
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .card h3 { color: var(--blue); margin-bottom: 10px; }
+        .price { font-size: 2rem; font-weight: 800; color: var(--blue); margin: 10px 0; }
+        .card-highlight { border: 2px solid var(--green); transform: scale(1.02); }
+
+        /* REFER A FRIEND SECTION */
+        .refer-box {
+            background: var(--blue);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .refer-box h2 { color: white; }
+        .refer-box p { margin-bottom: 20px; font-size: 1.1rem; }
+
+        /* BUTTONS */
+        .btn { 
+            background: var(--green); 
+            color: var(--white); 
+            padding: 12px 24px; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: 700;
+            display: inline-block;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover { background: #27ae60; }
+
+        /* ABOUT FLEX */
+        .about-flex { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-image { flex: 1; min-width: 300px; border-radius: 10px; overflow: hidden; }
+        .about-image img { width: 100%; display: block; }
+
+        /* GALLERY */
+        .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .photo-card img { width: 100%; border-radius: 8px; display: block; margin-bottom: 10px; }
+
+        /* CONTACT FORM */
+        .contact-box { background: var(--light-bg); padding: 30px; border-radius: 12px; max-width: 600px; margin: auto; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
+        #success-msg { display: none; text-align: center; background: #e9f8ee; color: #137642; padding: 20px; border-radius: 8px; }
+
+        footer { padding: 40px 0; color: var(--muted); font-size: 0.9rem; text-align: center; }
+
+        @media (max-width: 720px) {
+            .header-top { justify-content: center; text-align: center; }
+            .cta-header { margin: 10px 0; text-align: center; width: 100%; }
+            nav { justify-content: center; }
+            .card-highlight { transform: none; }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
+
+<div class="wrap">
     <header>
         <div class="header-top">
             <div class="logo"><img src="logo.png" alt="WestClean Logo"></div>
-            <div style="flex-grow: 1;">
-                <h1>WestClean Driveway Care</h1>
-                <p class="small muted">Professional Cleaning | Blacktown & Western Sydney</p>
+            <div>
+                <h1 style="font-size: 1.4rem;">WestClean Driveway Care</h1>
+                <p class="muted small">Local Blacktown Specialists • Fully Insured</p>
             </div>
-            <div class="cta">
-                <a class="btn" href="tel:0403079094">📞 0403 079 094</a>
+            <div class="cta-header">
+                <div class="small muted">Call for a free quote</div>
+                <a href="tel:0403079094" class="phone-link">0403 079 094</a>
             </div>
         </div>
         <nav>
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#services" class="nav-link">Pricing Packages</a>
-            <a href="#about" class="nav-link">About Us</a>
-            <a href="#faq" class="nav-link">FAQs</a>
-            <a href="#gallery" class="nav-link">Gallery</a>
-            <a href="#contact" class="nav-link">Get Quote</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#refer">Refer a Friend</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Get Quote</a>
         </nav>
     </header>
 
-    <main id="app-content"></main>
+    <main>
+        <section id="home" class="hero">
+            <h1>Expert Driveway & Bin Cleaning</h1>
+            <p>Providing Blacktown homes with professional high-pressure restoration. <br>We bring the "new look" back to your concrete and pathways.</p>
+            <a href="#pricing" class="btn">See Our Value Packages</a>
+        </section>
+
+        <section id="about">
+            <div class="about-flex">
+                <div class="about-text">
+                    <h2>Proudly Blacktown Local</h2>
+                    <p>WestClean is a family-owned business built on honesty and hard work. We specialize in <strong>High-Pressure Restoration</strong>, delivering industrial-grade cleaning results for residential properties.</p>
+                    <br>
+                    <p>We help you maintain your property's curb appeal and keep your bins hygienic. Whether it's removing years of oil stains or sanitizing your wheelie bins, we treat every job with the highest level of care.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=600" alt="Driveway cleaning in progress">
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+                <h2>Our Cleaning Packages</h2>
+                <p class="lead">Transparent pricing for Blacktown and surrounding suburbs.</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>The Standard Refresh</h3>
+                    <div class="price">$99</div>
+                    <p class="small muted">Ideal for single driveways or front entry paths.</p>
+                    <ul class="small" style="margin-top: 15px; padding-left: 20px;">
+                        <li>Full Pressure Wash</li>
+                        <li>Edge Trim Cleaning</li>
+                        <li>Mould & Dirt Removal</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="margin-top: auto; margin-top: 20px;">Book Now</a>
+                </div>
+
+                <div class="card card-highlight">
+                    <h3>The Home Hero Bundle</h3>
+                    <div class="price">$225</div>
+                    <p class="small muted">Our best value for complete exterior ground care.</p>
+                    <ul class="small" style="margin-top: 15px; padding-left: 20px;">
+                        <li>Driveway + Front Path</li>
+                        <li>Back Patio/Entertaining Area</li>
+                        <li><strong>2x Wheelie Bins Cleaned FREE</strong></li>
+                    </ul>
+                    <a href="#contact" class="btn" style="margin-top: auto; margin-top: 20px;">Claim Bundle</a>
+                </div>
+
+                <div class="card">
+                    <h3>Hygienic Bin Clean</h3>
+                    <div class="price">$10 <span style="font-size: 1rem;">/bin</span></div>
+                    <p class="small muted">Professional sanitising for your wheelie bins.</p>
+                    <ul class="small" style="margin-top: 15px; padding-left: 20px;">
+                        <li>High-Pressure Internal Wash</li>
+                        <li>Eco-Friendly Deodorising</li>
+                        <li>Bacteria & Odour Removal</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="margin-top: auto; margin-top: 20px;">Book Bins</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="refer">
+            <div class="refer-box">
+                <h2>Refer a Friend & Save!</h2>
+                <p>Enjoying your clean driveway? Share the love! Refer a neighbor or friend in the Blacktown area, and you both receive <strong>10% OFF</strong> your next service.</p>
+                <a href="#contact" class="btn" style="background: var(--white); color: var(--blue);">Get Your Referral Link</a>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Our Results</h2>
+            <div class="photo-grid">
+                <div class="photo-card"><img src="1.png" alt="Driveway Before/After"><p class="small muted">Concrete Restoration - Blacktown</p></div>
+                <div class="photo-card"><img src="2.png" alt="Pathway Before/After"><p class="small muted">Moss Removal - Seven Hills</p></div>
+                <div class="photo-card"><img src="3.png" alt="Patio Before/After"><p class="small muted">Outdoor Area Clean - Glenwood</p></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-title" style="text-align: center;">
+                <h2>Get Your Free Quote</h2>
+                <p class="lead">We respond to most requests within 2 hours.</p>
+            </div>
+            <div class="contact-box">
+                <div id="success-msg">
+                    <i data-lucide="check-circle" size="48"></i>
+                    <h3>Request Received!</h3>
+                    <p>Thanks for reaching out. We'll be in touch shortly to confirm your quote.</p>
+                </div>
+                <form id="quoteForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Suburb (e.g. Blacktown)" required>
+                    <textarea placeholder="Tell us about the job (e.g. Double driveway clean, Referral from neighbor)" rows="4"></textarea>
+                    <button type="submit" class="btn" style="width: 100%;">Send Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
-      <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px">
-        <div><strong>WestClean Driveway Care</strong><br><span class="muted small">Blacktown, NSW 2148</span></div>
-        <div style="text-align:right"><div class="small muted">westcleandriveway@gmail.com</div></div>
-      </div>
+        <p><strong>WestClean Driveway Care</strong></p>
+        <p>Blacktown, NSW 2148 | <a href="mailto:westcleandriveway@gmail.com" style="color: var(--blue); text-decoration: none;">westcleandriveway@gmail.com</a></p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.6;">&copy; 2024 WestClean. Your local pressure washing specialists.</p>
     </footer>
-  </div>
+</div>
 
-  <script>
-    const homeContent = `
-        <section class="hero-banner">
-            <h2>Restore Your Driveway's Shine</h2>
-            <p>Specialist high-pressure cleaning for Blacktown homeowners. <br>No sealing—just pure, professional restoration.</p>
-            <a href="#services" class="btn" style="margin-top:15px">View Pricing Packages</a>
-        </section>
-        
-        <div class="services-grid">
-            <div class="card">
-                <h3>Local & Reliable</h3>
-                <p class="small">Family-owned and operated right here in Blacktown. We show up on time, every time.</p>
-            </div>
-            <div class="card">
-                <h3>Eco-Friendly</h3>
-                <p class="small">We use high-pressure water and biodegradable treatments that are safe for your pets and garden.</p>
-            </div>
-            <div class="card">
-                <h3>Fully Insured</h3>
-                <p class="small">Work with peace of mind. Our crew is fully insured for all residential and commercial jobs.</p>
-            </div>
-        </div>
-    `;
-
-    const servicesContent = `
-        <section>
-            <h2>Driveway & Bin Cleaning Packages</h2>
-            <p class="lead">Transparent pricing with no hidden fees. Choose a package that fits your home.</p>
-            <div class="services-grid">
-                <div class="card">
-                    <strong style="color:var(--green)">The Standard Refresh</strong>
-                    <h2 style="margin:10px 0">$99</h2>
-                    <p class="small">Perfect for single driveways. Includes high-pressure wash and debris removal.</p>
-                    <ul class="small" style="padding-left:15px; margin-top:10px">
-                        <li>Full Pressure Wash</li>
-                        <li>Edge Cleaning</li>
-                        <li>Mould & Grime Treatment</li>
-                    </ul>
-                </div>
-                <div class="card" style="border: 2px solid var(--blue)">
-                    <strong style="color:var(--blue)">The Home Hero Bundle</strong>
-                    <h2 style="margin:10px 0">$225</h2>
-                    <p class="small">Our most popular choice for families. Complete exterior ground care.</p>
-                    <ul class="small" style="padding-left:15px; margin-top:10px">
-                        <li>Driveway + Front Path</li>
-                        <li>Back Patio Wash</li>
-                        <li>2x Wheelie Bins Cleaned FREE</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <strong style="color:var(--red)">The Clean Bin Special</strong>
-                    <h2 style="margin:10px 0">$10 <small>/bin</small></h2>
-                    <p class="small">Hygienic deep clean and deodorising. Stop the smells and the pests.</p>
-                    <ul class="small" style="padding-left:15px; margin-top:10px">
-                        <li>High-Pressure Sanitisation</li>
-                        <li>Eco-Friendly Deodoriser</li>
-                        <li>Bacteria Removal</li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top:30px">
-                <a href="#contact" class="btn">Book Your Package Now</a>
-            </div>
-        </section>
-    `;
-
-    const aboutContent = `
-        <section>
-            <h2>About WestClean</h2>
-            <p>WestClean Driveway Care was started with a simple goal: to provide Blacktown residents with a high-quality, honest exterior cleaning service. We noticed many "big companies" were overcharging for sealing services that homeowners didn't actually need.</p>
-            <p>We decided to focus exclusively on <strong>Professional Pressure Restoration</strong>. By focusing on cleaning rather than chemical coatings, we save you money while delivering a result that makes your concrete look brand new.</p>
-            <h3 style="margin-top:20px">Our Service Area</h3>
-            <div class="suburb-grid">
-                <span class="suburb-tag">Blacktown</span><span class="suburb-tag">Seven Hills</span><span class="suburb-tag">Kings Langley</span>
-                <span class="suburb-tag">Doonside</span><span class="suburb-tag">Glenwood</span><span class="suburb-tag">Quakers Hill</span>
-            </div>
-        </section>
-    `;
-
-    const faqContent = `
-        <section>
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>Do you offer sealing?</h3>
-                <p class="small">No. We specialize exclusively in deep-clean pressure washing. We find that a professional high-pressure clean is sufficient for 90% of residential driveways in Blacktown.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Do you need access to water?</h3>
-                <p class="small">Yes, we connect to your external garden tap. Our commercial-grade equipment is water-efficient but requires a standard tap connection.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How long does it take?</h3>
-                <p class="small">A standard driveway takes about 1-2 hours. Large bundles (Driveway + Patio) usually take 3-4 hours.</p>
-            </div>
-        </section>
-    `;
-
-    const galleryContent = `
-        <section>
-            <h2>Our Work</h2>
-            <div class="photos">
-                <div class="card"><img src="1.png" style="width:100%; border-radius:5px;"><p class="small">Driveway Refresh - Blacktown</p></div>
-                <div class="card"><img src="2.png" style="width:100%; border-radius:5px;"><p class="small">Pathway Clean - Seven Hills</p></div>
-                <div class="card"><img src="3.png" style="width:100%; border-radius:5px;"><p class="small">Oil Stain Removal - Glenwood</p></div>
-            </div>
-        </section>
-    `;
-
-    const contactContent = `
-        <section>
-            <h2>Get a Free Quote</h2>
-            <div id="thank-you-message">
-                <h3>✅ Request Sent!</h3>
-                <p>Thanks! We'll be in touch within 2 hours to confirm your quote.</p>
-            </div>
-            <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="text" placeholder="Suburb" required>
-                <textarea placeholder="Describe what you need cleaned (e.g. Double Driveway + 2 Bins)" rows="4"></textarea>
-                <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer">Send Quote Request</button>
-            </form>
-        </section>
-    `;
-
-    const routes = {
-        'home': homeContent,
-        'services': servicesContent,
-        'about': aboutContent,
-        'faq': faqContent,
-        'gallery': galleryContent,
-        'contact': contactContent
-    };
-
-    function renderPage() {
-        const hash = window.location.hash.substring(1) || 'home';
-        document.getElementById('app-content').innerHTML = routes[hash] || homeContent;
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === '#' + hash);
-        });
-        window.scrollTo(0,0);
-        lucide.createIcons();
-    }
-
-    function handleQuoteSubmit(e) {
+<script>
+    lucide.createIcons();
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        document.getElementById('quoteForm').style.display = 'none';
-        document.getElementById('thank-you-message').style.display = 'block';
-    }
+        this.style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+    });
+</script>
 
-    window.addEventListener('hashchange', renderPage);
-    window.onload = () => { if(!window.location.hash) window.location.hash = '#home'; renderPage(); };
-  </script>
 </body>
 </html>
