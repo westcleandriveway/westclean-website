@@ -94,6 +94,23 @@
         .about-image { flex: 1; min-width: 300px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); }
         .about-image img { width: 100%; display: block; height: 450px; object-fit: cover; }
 
+        /* WHATSAPP BOX */
+        .whatsapp-box {
+            background: #25D366;
+            color: white;
+            padding: 25px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .whatsapp-box:hover { background: #128C7E; transform: scale(1.02); }
+
         /* LOCATION SECTION */
         .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
         .suburb-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
@@ -170,10 +187,11 @@
                 <h2>The Local Choice for Blacktown</h2>
                 <p>WestClean is a family-owned business dedicated to professional property restoration. We specialize in high-pressure cleaning for driveways, patios, and pathways, as well as hygienic bin care.</p>
                 <br>
-                <p>We use commercial-grade equipment to lift years of oil stains, tyre marks, and mould that standard garden hoses can't touch. We are fully insured and committed to being the most reliable trade service in your neighborhood.</p>
+                <h3 style="color: var(--dark); margin-bottom: 10px;">End-of-Lease Driveway Restoration</h3>
+                <p>Moving out? We provide professional end-of-lease driveway cleaning to help you secure your bond. We remove stubborn oil leaks, tyre marks, and heavy stains that property managers look for, leaving your rental property in pristine condition.</p>
             </div>
             <div class="about-image">
-                <img src="Shiny driveway and suburban home.png" alt="High pressure driveway cleaning">
+                <img src="Shiny driveway and suburban home.jpg" alt="High pressure driveway cleaning">
             </div>
         </div>
     </section>
@@ -187,7 +205,7 @@
             <div class="location-grid">
                 <div class="location-info">
                     <h3 style="color: var(--dark); margin-bottom: 20px;">Western Sydney Specialists</h3>
-                    <p>Based in Blacktown, we extend our services to all neighboring suburbs. Whether you need a residential driveway refresh or regular bin maintenance, our team is local, reliable, and ready to help.</p>
+                    <p>Based in Blacktown, we extend our services to all neighboring suburbs. Whether you need a residential driveway refresh or regular bin maintenance, our team is local and ready to help.</p>
                     <div class="suburb-list">
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Blacktown</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Seven Hills</div>
@@ -261,21 +279,29 @@
     <section id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Get a Free Quote</h2>
-                <p>We aim to respond to all inquiries within 2 hours.</p>
+                <h2>Get a Fast and Free Quote</h2>
+                <p>Choose the method that works best for you below.</p>
             </div>
             <div class="contact-box">
+                
+                <a href="https://wa.me/61403079094" class="whatsapp-box">
+                    <i data-lucide="message-square"></i>
+                    <span>WhatsApp a Photo to 0403 079 094 for an Instant Quote!</span>
+                </a>
+
+                <p style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; color: var(--muted);">Or fill out the form and we'll reply within 2 hours:</p>
+
                 <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="contact-form">
                     <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
                     
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
                     <input type="text" name="suburb" placeholder="Suburb" required>
-                    <textarea name="message" placeholder="Tell us what you need cleaned (e.g., Double driveway, 2 bins)..." rows="4" required></textarea>
+                    <textarea name="message" placeholder="Tell us what you need cleaned (e.g., Double driveway, End-of-lease)..." rows="4" required></textarea>
                     
                     <input type="hidden" name="redirect" value="https://westcleandriveway.github.io/westclean-website/?#home">
                     
-                    <button type="submit" class="btn-primary" style="width: 100%;">Send Request</button>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Email Request</button>
                 </form>
             </div>
         </div>
