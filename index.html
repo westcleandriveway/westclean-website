@@ -56,10 +56,11 @@
         }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
         
-        /* RESTORED LOGO STYLE */
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--dark); text-decoration: none; letter-spacing: -0.5px; }
-        .logo span { color: var(--primary-blue); }
-        .logo-yellow { color: #facc15; } /* Yellow for West */
+        /* RESTORED LOGO STYLE - YELLOW AND BLUE */
+        .logo { font-size: 1.6rem; font-weight: 800; text-decoration: none; letter-spacing: -0.5px; }
+        .logo .west { color: #facc15; } /* Bright Yellow */
+        .logo .clean { color: var(--primary-blue); }
+        .logo .lawn { color: var(--dark); font-size: 1.2rem; margin-left: 5px; }
         
         .nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--slate); font-weight: 600; font-size: 0.95rem; transition: 0.2s; }
@@ -83,7 +84,7 @@
         /* BUTTONS */
         .btn-primary { 
             background: var(--primary-blue); 
-            color: var(--bright-yellow); 
+            color: var(--bright-yellow); /* Yellow text for visibility */
             padding: 16px 36px; 
             text-decoration: none; 
             border-radius: 8px; 
@@ -151,11 +152,6 @@
         .card h3 { color: var(--dark); font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
         .price { font-size: 2.5rem; font-weight: 800; color: var(--primary-blue); margin: 15px 0; }
 
-        /* CONTACT FORM */
-        #contact { background: var(--soft-blue); }
-        .contact-box { max-width: 650px; margin: auto; background: white; padding: 50px; border-radius: 24px; box-shadow: var(--shadow-md); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 16px; margin-bottom: 20px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 1rem; transition: 0.3s; outline: none; }
-
         footer { background: var(--dark); color: #94a3b8; padding: 80px 0; text-align: center; }
         
         @media (max-width: 768px) {
@@ -175,7 +171,9 @@
 
     <nav>
         <div class="container nav-container">
-            <a href="#home" class="logo"><span class="logo-yellow">West</span><span>Clean</span></a>
+            <a href="#home" class="logo">
+                <span class="west">West</span><span class="clean">Clean</span><span class="lawn">& Lawn Care</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Services</a></li>
@@ -276,10 +274,12 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Service Areas</h2>
-                <p>Based in Blacktown, serving all of Western Sydney.</p>
+                <p>We proudly provide professional property maintenance across all of Western Sydney.</p>
             </div>
             <div class="location-grid">
                 <div class="location-info">
+                    <h3 style="color: var(--dark); margin-bottom: 20px;">Western Sydney Specialists</h3>
+                    <p>Based in Blacktown, we extend our services to all neighboring suburbs. Whether you need a residential driveway refresh or regular lawn maintenance, our team is local, reliable, and ready to help.</p>
                     <div class="suburb-list">
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Blacktown</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Seven Hills</div>
@@ -292,9 +292,30 @@
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Penrith Area</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Parramatta Area</div>
                     </div>
+                    <p style="margin-top: 30px; font-weight: 700; color: var(--dark);">Don't see your suburb? If you are in Western Sydney, we've got you covered!</p>
                 </div>
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106153.25056763445!2d150.81734346065565!3d-33.75317765181504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b1298e370321595%3A0x5017d681632e550!2sBlacktown%20NSW!5e0!3m2!1sen!2sau!4v1713500000000!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title"><h2>Recent Work</h2></div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="1.png" alt="Driveway restoration">
+                    <div class="gallery-cap">Driveway Restoration</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="2.png" alt="Lawn mowing edging">
+                    <div class="gallery-cap">Precision Lawn Care</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="3.png" alt="Patio refresh">
+                    <div class="gallery-cap">Outdoor Area Cleaning</div>
                 </div>
             </div>
         </div>
