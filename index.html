@@ -76,22 +76,19 @@
         }
         .hero h1 { font-size: clamp(2.5rem, 6vw, 3.8rem); font-weight: 800; margin-bottom: 20px; }
 
-        /* ABOUT SECTION RESTORED */
-        .about-flex { display: flex; gap: 60px; align-items: center; flex-wrap: wrap; }
-        .about-text { flex: 1; min-width: 300px; }
-        .about-image { flex: 1; min-width: 300px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); }
-        .about-image img { width: 100%; display: block; height: 450px; object-fit: cover; }
+        /* ABOUT SECTION RESTORED AS PER IMAGE */
+        .about-flex { display: flex; gap: 60px; align-items: center; flex-wrap: wrap; padding: 100px 0; }
+        .about-text { flex: 1; min-width: 350px; }
+        .about-image { flex: 1; min-width: 350px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); }
+        .about-image img { width: 100%; display: block; height: auto; }
+        .about-text h2 { color: #1e3a8a; font-size: 2rem; margin-bottom: 15px; }
+        .about-text h3 { color: #1e3a8a; margin: 25px 0 15px; }
 
         /* BUTTONS */
         .btn-primary { background: var(--primary-blue); color: var(--bright-yellow); padding: 16px 36px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; border: none; transition: 0.3s; }
         .btn-secondary { background: var(--white); color: var(--dark); padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; margin-left: 12px; display: inline-block; border: 1px solid var(--border-color); }
 
-        /* SECTIONS */
-        section { padding: 100px 0; }
-        .section-title { text-align: center; margin-bottom: 70px; }
-        .section-title h2 { font-size: 2.25rem; color: var(--dark); font-weight: 800; }
-
-        /* PRICING */
+        /* PRICING RESTORED ALL SERVICES */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card { background: var(--white); padding: 40px 30px; border-radius: 16px; text-align: center; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
         .card:hover { transform: translateY(-8px); border-color: var(--primary-blue); }
@@ -104,14 +101,14 @@
         .gallery-cap { position: absolute; bottom: 20px; left: 20px; background: white; padding: 10px 20px; border-radius: 10px; font-weight: 700; color: var(--dark); }
         .compare-label { position: absolute; top: 20px; right: 20px; background: var(--primary-blue); color: white; padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; }
 
-        /* LOCATIONS */
+        /* LOCATIONS RESTORED FULL LIST */
         .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
         .suburb-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
         .suburb-item { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
         .map-container { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); height: 450px; }
 
         /* CONTACT */
-        #contact { background: var(--soft-blue); }
+        #contact { background: var(--soft-blue); padding: 100px 0; }
         .contact-box { max-width: 650px; margin: auto; background: white; padding: 50px; border-radius: 24px; box-shadow: var(--shadow-md); }
         .contact-form input, .contact-form textarea { width: 100%; padding: 16px; margin-bottom: 20px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 1rem; background: #f8fafc; outline: none; }
         .whatsapp-box { background: #25D366; color: white; padding: 20px; border-radius: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; text-decoration: none; font-weight: 700; }
@@ -120,7 +117,7 @@
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .location-grid, .about-flex { grid-template-columns: 1fr; flex-direction: column; }
+            .location-grid, .about-flex { flex-direction: column; }
             .btn-primary, .btn-secondary { width: 100%; margin-left: 0; margin-top: 10px; }
         }
     </style>
@@ -145,7 +142,7 @@
     <header id="home" class="hero">
         <div class="container">
             <h1>WestClean Driveway & Lawn Care</h1>
-            <p>Professional property maintenance across Blacktown and Western Sydney. High-pressure cleaning and precision lawn care.</p>
+            <p>Your local experts for pristine driveways and perfectly maintained lawns. Fast, professional, and proud to serve Blacktown.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn-primary">Book Free Quote</a>
                 <a href="#about" class="btn-secondary">Our Services</a>
@@ -158,13 +155,11 @@
             <div class="about-text">
                 <h2>Total Curb Appeal for Your Home</h2>
                 <p>WestClean is a family-owned business dedicated to professional property maintenance. We specialize in high-pressure restoration and precision lawn care to keep your home looking its best.</p>
-                <br>
-                <h3 style="color: var(--dark); margin-bottom: 10px;">Our Specialties</h3>
-                <ul style="list-style: none; margin-bottom: 20px;">
-                    <li style="margin-bottom: 10px;"><i data-lucide="check-circle" size="18" style="color:var(--primary-blue); vertical-align: middle;"></i> <strong>Pressure Washing:</strong> Driveways, patios, and end-of-lease restorations.</li>
-                    <li style="margin-bottom: 10px;"><i data-lucide="check-circle" size="18" style="color:var(--primary-blue); vertical-align: middle;"></i> <strong>Lawn Maintenance:</strong> Expert mowing, professional edging, and cleanup.</li>
-                    <li style="margin-bottom: 10px;"><i data-lucide="check-circle" size="18" style="color:var(--primary-blue); vertical-align: middle;"></i> <strong>Hygienic Care:</strong> Specialized wheelie bin cleaning and deodorizing.</li>
-                </ul>
+                
+                <h3>Our Specialties</h3>
+                <p><strong>Pressure Washing:</strong> Driveways, patios, and end-of-lease restorations.</p>
+                <p><strong>Lawn Maintenance:</strong> Expert mowing, professional edging, and cleanup.</p>
+                <p><strong>Hygienic Care:</strong> Specialized wheelie bin cleaning and deodorizing.</p>
             </div>
             <div class="about-image">
                 <img src="Shiny driveway and suburban home.png" alt="WestClean Services">
@@ -174,19 +169,31 @@
 
     <section id="pricing">
         <div class="container">
-            <div class="section-title"><h2>Service Packages</h2></div>
+            <div class="section-title"><h2>Our Services & Packages</h2></div>
             <div class="grid">
                 <div class="card">
-                    <div><h3>Standard Refresh</h3><div class="price">$99</div><p>Single driveway & front path high-pressure wash.</p></div>
+                    <div><h3>Standard Refresh</h3><div class="price">$99</div><p>Perfect for single driveways and front entry paths. High-pressure wash included.</p></div>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px;">Book Clean</a>
+                </div>
+                <div class="card">
+                    <div><h3>Double Driveway Clean</h3><div class="price">$145</div><p>2-car driveway (up to 50m²), edges trimmed, full pressure wash.</p></div>
                     <a href="#contact" class="btn-primary" style="margin-top:20px;">Book Now</a>
                 </div>
                 <div class="card" style="border: 2px solid var(--primary-blue);">
-                    <div><h3>Home Hero Bundle</h3><div class="price">$225</div><p><strong>BEST VALUE:</strong> Driveway, Path, Patio + 2x Bins Cleaned FREE!</p></div>
+                    <div><h3>Home Hero Bundle</h3><div class="price">$225</div><p><strong>BEST VALUE:</strong> Full Driveway, Front Path, and Back Patio clean. Plus <strong>2x Wheelie Bins Cleaned FREE!</strong></p></div>
                     <a href="#contact" class="btn-primary" style="margin-top:20px;">Claim Offer</a>
                 </div>
                 <div class="card">
-                    <div><h3>The Full Reveal</h3><div class="price">$380</div><p>Full Driveway & Pathway Clean + Professional Lawn Mow & Edge.</p></div>
+                    <div><h3>The Full Reveal</h3><div class="price">$380</div><p><strong>ULTIMATE CARE:</strong> Full Driveway & Pathway Clean, plus a Professional Lawn Mow & Edge.</p></div>
                     <a href="#contact" class="btn-primary" style="margin-top:20px;">Get Quote</a>
+                </div>
+                <div class="card">
+                    <div><h3>End-of-Lease Special</h3><div class="price">$185</div><p>Driveway + Paths. Focused on bond-back requirements with stain treatment.</p></div>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px;">Book Special</a>
+                </div>
+                <div class="card">
+                    <div><h3>Lawn Mowing</h3><div class="price">$60<span>+</span></div><p>Includes precision mowing, edging of all paths, and leaf blowing of clippings.</p></div>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px;">Book Mow</a>
                 </div>
             </div>
         </div>
@@ -194,10 +201,7 @@
 
     <section id="gallery" style="background: #f1f5f9;">
         <div class="container">
-            <div class="section-title">
-                <h2>Recent Results</h2>
-                <p>Real transformations from our local projects.</p>
-            </div>
+            <div class="section-title"><h2>Recent Results</h2></div>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="compare-label">Before & After</div>
@@ -228,6 +232,8 @@
                         <div class="suburb-item"><i data-lucide="map-pin" size="16"></i> Seven Hills</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16"></i> Glenwood</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16"></i> Kings Langley</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16"></i> Stanhope Gardens</div>
+                        <div class="suburb-item"><i data-lucide="map-pin" size="16"></i> The Ponds</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16"></i> Quakers Hill</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16"></i> Schofields</div>
                     </div>
