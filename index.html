@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WestClean Driveway Care — Blacktown Pressure Washing</title>
+    <title>WestClean Driveway & Lawn Care — Blacktown Local Services</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
     <style>
         :root {
@@ -118,19 +118,22 @@
         .map-container { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); height: 450px; }
 
         /* PRICING GRID */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card { 
             background: var(--white); 
-            padding: 50px 40px; 
+            padding: 40px 30px; 
             border-radius: 16px; 
             text-align: center; 
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); border-color: var(--primary-blue); }
-        .card h3 { color: var(--dark); font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
-        .price { font-size: 2.75rem; font-weight: 800; color: var(--primary-blue); margin: 20px 0; }
+        .card h3 { color: var(--dark); font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+        .price { font-size: 2.5rem; font-weight: 800; color: var(--primary-blue); margin: 15px 0; }
 
         /* GALLERY */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
@@ -148,7 +151,7 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .location-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.3rem; }
             .btn-secondary { margin-left: 0; margin-top: 10px; width: 100%; }
             .btn-primary { width: 100%; }
         }
@@ -158,10 +161,10 @@
 
     <nav>
         <div class="container nav-container">
-            <a href="#home" class="logo">West<span>Clean</span></a>
+            <a href="#home" class="logo">WestClean <span>& Lawn Care</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">Services</a></li>
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#gallery">Gallery</a></li>
@@ -172,11 +175,11 @@
 
     <header id="home" class="hero">
         <div class="container">
-            <h1>Professional Driveway Cleaning</h1>
-            <p>Restore your home's curb appeal with high-pressure cleaning technology. Fast, eco-friendly, and proudly local to Blacktown.</p>
+            <h1>WestClean Driveway & Lawn Care</h1>
+            <p>Your local experts for pristine driveways and perfectly maintained lawns. Fast, professional, and proud to serve Blacktown.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn-primary">Book Free Quote</a>
-                <a href="#about" class="btn-secondary">Our Story</a>
+                <a href="#about" class="btn-secondary">Our Services</a>
             </div>
         </div>
     </header>
@@ -184,14 +187,18 @@
     <section id="about">
         <div class="container about-flex">
             <div class="about-text">
-                <h2>The Local Choice for Blacktown</h2>
-                <p>WestClean is a family-owned business dedicated to professional property restoration. We specialize in high-pressure cleaning for driveways, patios, and pathways, as well as hygienic bin care.</p>
+                <h2>Total Curb Appeal for Your Home</h2>
+                <p>WestClean is a family-owned business dedicated to professional property maintenance. We specialize in high-pressure restoration and precision lawn care to keep your home looking its best.</p>
                 <br>
-                <h3 style="color: var(--dark); margin-bottom: 10px;">End-of-Lease Driveway Restoration</h3>
-                <p>Moving out? We provide professional end-of-lease driveway cleaning to help you secure your bond. We remove stubborn oil leaks, tyre marks, and heavy stains that property managers look for, leaving your rental property in pristine condition.</p>
+                <ul style="list-style: none; margin-bottom: 20px;">
+                    <li style="margin-bottom: 10px;"><i data-lucide="check-circle" size="18" style="color:var(--primary-blue); vertical-align: middle;"></i> <strong>Pressure Washing:</strong> Driveways, patios, pathways, and end-of-lease cleans.</li>
+                    <li style="margin-bottom: 10px;"><i data-lucide="check-circle" size="18" style="color:var(--primary-blue); vertical-align: middle;"></i> <strong>Lawn Maintenance:</strong> Expert mowing, professional edging, and cleanup.</li>
+                    <li style="margin-bottom: 10px;"><i data-lucide="check-circle" size="18" style="color:var(--primary-blue); vertical-align: middle;"></i> <strong>Hygienic Care:</strong> Specialized wheelie bin cleaning and deodorizing.</li>
+                </ul>
+                <p>We use commercial-grade equipment to lift stubborn stains and deliver a perfect cut every time. We are fully insured and committed to the Western Sydney community.</p>
             </div>
             <div class="about-image">
-                <img src="Shiny driveway and suburban home.png" alt="High pressure driveway cleaning">
+                <img src="Shiny driveway and suburban home.jpg" alt="WestClean Driveway and Lawn Care Services">
             </div>
         </div>
     </section>
@@ -200,12 +207,12 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Service Areas</h2>
-                <p>We proudly provide professional pressure cleaning across all of Western Sydney.</p>
+                <p>We provide expert property maintenance across all of Western Sydney.</p>
             </div>
             <div class="location-grid">
                 <div class="location-info">
                     <h3 style="color: var(--dark); margin-bottom: 20px;">Western Sydney Specialists</h3>
-                    <p>Based in Blacktown, we extend our services to all neighboring suburbs. Whether you need a residential driveway refresh or regular bin maintenance, our team is local and ready to help.</p>
+                    <p>Based in Blacktown, we extend our services to all neighboring suburbs. Whether you need a one-off driveway clean or regular lawn maintenance, our team is local and ready to help.</p>
                     <div class="suburb-list">
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Blacktown</div>
                         <div class="suburb-item"><i data-lucide="map-pin" size="16" style="color:var(--primary-blue)"></i> Seven Hills</div>
@@ -221,7 +228,7 @@
                     <p style="margin-top: 30px; font-weight: 700; color: var(--dark);">Don't see your suburb? If you are in Western Sydney, we've got you covered!</p>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106118.91039868846!2d150.81434199736855!3d-33.77450125810248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12999052044701%3A0x5017d681632ad40!2sBlacktown%20NSW!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106153.25056763445!2d150.81734346065565!3d-33.75317765181504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b1298e370321595%3A0x5017d681632e550!2sBlacktown%20NSW!5e0!3m2!1sen!2sau!4v1713500000000!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -230,27 +237,41 @@
     <section id="pricing">
         <div class="container">
             <div class="section-title">
-                <h2>Value Cleaning Packages</h2>
-                <p>Transparent pricing with no hidden fees.</p>
+                <h2>Maintenance Packages</h2>
+                <p>Transparent pricing for a better looking home.</p>
             </div>
             <div class="grid">
                 <div class="card">
-                    <h3>Standard Refresh</h3>
-                    <div class="price">$99</div>
-                    <p>Perfect for single driveways and front entry paths. High-pressure wash included.</p>
-                    <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Book Now</a>
+                    <div>
+                        <h3>Lawn Mowing</h3>
+                        <div class="price">$60<span>+</span></div>
+                        <p>Includes precision mowing, edging of all paths, and leaf blowing of clippings.</p>
+                    </div>
+                    <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Book Mow</a>
                 </div>
                 <div class="card" style="border: 2px solid var(--primary-blue);">
-                    <h3>Home Hero Bundle</h3>
-                    <div class="price">$225</div>
-                    <p><strong>BEST VALUE:</strong> Full Driveway, Front Path, and Back Patio clean. Plus <strong>2x Wheelie Bins Cleaned FREE!</strong></p>
+                    <div>
+                        <h3>The Full Reveal</h3>
+                        <div class="price">$280</div>
+                        <p><strong>BEST VALUE:</strong> Full Driveway Clean, Pathway Clean, and a Professional Lawn Mow & Edge.</p>
+                    </div>
                     <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Claim Offer</a>
                 </div>
                 <div class="card">
-                    <h3>Hygienic Bin Clean</h3>
-                    <div class="price">$10<span>/bin</span></div>
-                    <p>Deep sanitizing internal wash with eco-friendly deodorizer. Stop the smells today.</p>
-                    <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Book Bins</a>
+                    <div>
+                        <h3>Driveway Refresh</h3>
+                        <div class="price">$99</div>
+                        <p>High-pressure deep clean for single driveways and front entry paths.</p>
+                    </div>
+                    <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Book Clean</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Bin & Mow</h3>
+                        <div class="price">$75</div>
+                        <p>Professional lawn mow plus 2x Wheelie Bins deep cleaned and deodorized.</p>
+                    </div>
+                    <a href="#contact" class="btn-primary" style="margin-top:30px; width:100%;">Book Combo</a>
                 </div>
             </div>
         </div>
@@ -258,19 +279,19 @@
 
     <section id="gallery">
         <div class="container">
-            <div class="section-title"><h2>Our Recent Work</h2></div>
+            <div class="section-title"><h2>Recent Work</h2></div>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="1.png" alt="Driveway restoration">
-                    <div class="gallery-cap">Driveway Restoration - Blacktown</div>
+                    <div class="gallery-cap">Driveway Restoration</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="2.png" alt="Pathway cleaning">
-                    <div class="gallery-cap">Pathway Cleaning - Seven Hills</div>
+                    <img src="2.png" alt="Lawn mowing edging">
+                    <div class="gallery-cap">Precision Lawn Care</div>
                 </div>
                 <div class="gallery-item">
                     <img src="3.png" alt="Patio refresh">
-                    <div class="gallery-cap">Patio Refresh - Kings Langley</div>
+                    <div class="gallery-cap">Outdoor Area Cleaning</div>
                 </div>
             </div>
         </div>
@@ -280,16 +301,16 @@
         <div class="container">
             <div class="section-title">
                 <h2>Get a Fast and Free Quote</h2>
-                <p>Choose the method that works best for you below.</p>
+                <p>Most quotes provided instantly via photo!</p>
             </div>
             <div class="contact-box">
                 
                 <a href="https://wa.me/61403079094" class="whatsapp-box">
                     <i data-lucide="message-square"></i>
-                    <span>WhatsApp a Photo of your Driveway to 0403 079 094 for an Instant Quote!</span>
+                    <span>WhatsApp a Photo to 0403 079 094 for an Instant Quote!</span>
                 </a>
 
-                <p style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; color: var(--muted);">Or fill out the form and we'll reply within 2 hours:</p>
+                <p style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; color: var(--muted);">Or fill out the form below:</p>
 
                 <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="contact-form">
                     <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
@@ -297,11 +318,11 @@
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
                     <input type="text" name="suburb" placeholder="Suburb" required>
-                    <textarea name="message" placeholder="Tell us what you need cleaned (e.g., Double driveway, End-of-lease)..." rows="4" required></textarea>
+                    <textarea name="message" placeholder="How can we help? (e.g., Lawn mowing, Driveway clean, End-of-lease...)" rows="4" required></textarea>
                     
                     <input type="hidden" name="redirect" value="https://westcleandriveway.github.io/westclean-website/?#home">
                     
-                    <button type="submit" class="btn-primary" style="width: 100%;">Send Email Request</button>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Request</button>
                 </form>
             </div>
         </div>
@@ -309,9 +330,9 @@
 
     <footer>
         <div class="container">
-            <p><strong>WestClean Driveway Care</strong> | Blacktown NSW</p>
+            <p><strong>WestClean Driveway & Lawn Care</strong> | Blacktown NSW</p>
             <p style="margin-top:10px; opacity:0.8;">westcleandriveway@gmail.com | 0403 079 094</p>
-            <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.5;">© 2024 WestClean. High-pressure property cleaning specialists.</p>
+            <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.5;">© 2026 WestClean. Property maintenance specialists.</p>
         </div>
     </footer>
 
