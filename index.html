@@ -440,5 +440,17 @@
     </footer>
 
     <script>lucide.createIcons();</script>
+    <script>
+  // This closes the mobile menu automatically when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      // Only runs on mobile screens
+      if (window.innerWidth <= 768) {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>
