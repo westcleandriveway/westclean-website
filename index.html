@@ -124,32 +124,56 @@
             .btn-primary, .btn-secondary { width: 100%; margin-left: 0; margin-top: 15px; }
             .about-image img, .map-container { height: 350px; }
         }
-        /* Mobile Menu Fix - Makes the links visible on phones */
+
+        /* Styling the Hamburger Button */
+#menu-toggle {
+    display: none; /* Hide on computers */
+    background: #2563eb;
+    color: #ffff00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+/* Make it show up on phones */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block !important;
+    }
+}
+        
+        /* Combined Mobile Navigation Fix */
 @media (max-width: 768px) {
     .nav-container {
+    display: flex !important;
+    flex-direction: row !important; /* This keeps Logo left, Button right */
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative; /* Helps the dropdown menu position itself */
+}
+
+    #menu-toggle {
         display: block !important;
-        text-align: center;
-        padding: 10px 0;
+        margin: 0 !important; /* Keeps it to the right */
     }
 
     .nav-links {
-    display: flex; /* Removed !important */
-    flex-direction: column; /* Removed !important */
-    align-items: center;
-    padding: 0;
-    margin: 10px 0;
+        display: none; /* Keep it hidden until the button is clicked */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 }
-
-    .nav-links li {
-        margin: 5px 0 !important;
-        list-style: none;
-    }
-
-    .nav-links li a {
-        font-size: 16px;
-        display: block;
-        padding: 8px;
-    }
 
     /* Keeps the Get Quote button prominent */
     .nav-cta {
@@ -167,6 +191,7 @@
     <nav>
         <div class="container nav-container">
             <a href="#home" class="logo"><span class="west">West</span><span class="clean">Clean</span></a>
+            <button id="menu-toggle">☰ MENU</button>
             <ul class="nav-links">
                <li><a href="#about">Our Story</a></li>
 <li><a href="#pricing">Pricing & Packages</a></li>
@@ -441,13 +466,25 @@
 
     <script>lucide.createIcons();</script>
    
-    <script>
-  // This closes the mobile menu automatically when a link is clicked
+   <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  // This handles the button click to Open or Close
+  menuToggle.addEventListener('click', () => {
+    // Check if it's currently hidden or not set yet
+    if (navLinks.style.display === 'none' || navLinks.style.display === '') {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+    } else {
+      navLinks.style.display = 'none';
+    }
+  });
+
+  // This handles closing it automatically when a link is tapped
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      // Only runs on mobile screens
       if (window.innerWidth <= 768) {
-        const navLinks = document.querySelector('.nav-links');
         navLinks.style.display = 'none';
       }
     });
