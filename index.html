@@ -203,21 +203,28 @@
                     <div><h3>Double Driveway Clean</h3><div class="price">$145</div><p>2-car driveway (up to 50m²), edges trimmed, and full high-pressure wash.</p></div>
                     <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Book Now</a>
                 </div>
-                <div class="package-card" style="border: 3px solid #facc15; transform: scale(1.05); position: relative; background: #ffffff; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);">
+                
+<div style="border: 3px solid #facc15; border-radius: 20px; padding: 40px 30px; position: relative; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 15px;">
     
-    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #facc15; color: #0f172a; padding: 5px 20px; border-radius: 20px; font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">
+    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #facc15; color: #0f172a; padding: 6px 20px; border-radius: 50px; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; z-index: 10;">
         Most Popular
     </div>
 
-    <div class="package-header">
-        <h3>Home Hero Bundle</h3>
-        <div class="price">$225</div>
-    </div>
-    <div class="package-features">
-        <p><strong>BEST VALUE:</strong> Full Driveway, Front Path, and Back Patio clean.</p>
-        <p style="color: #2563eb; font-weight: 700;">+ 2x Wheelie Bins Cleaned FREE!</p>
-    </div>
-    <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Claim Offer</a>
+    <h3 style="font-size: 1.8rem; margin: 0; color: #0f172a; font-weight: 800;">Home Hero Bundle</h3>
+    
+    <div style="font-size: 3rem; font-weight: 800; color: #2563eb; line-height: 1;">$225</div>
+
+    <p style="margin: 5px 0; font-size: 1.1rem; line-height: 1.5; color: #475569;">
+        <strong style="color: #0f172a;">BEST VALUE:</strong> Full Driveway, Front Path, and Back Patio clean.
+    </p>
+
+    <p style="color: #2563eb; font-weight: 700; font-size: 1rem; margin: 0;">
+        + 2x Wheelie Bins Cleaned FREE!
+    </p>
+
+    <a href="#contact" style="display: block; text-align: center; background: #2563eb; color: #ffff00; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.2rem; margin-top: auto;">
+        Claim Offer
+    </a>
 </div>
                 <div class="card">
                     <div><h3>The Full Reveal</h3><div class="price">$300</div><p><strong>ULTIMATE CARE:</strong> Full Driveway & Pathway Clean, plus a Professional Lawn Mow & Edge.</p></div>
@@ -322,15 +329,25 @@
 
     <form action="https://api.web3forms.com/submit" ...
                 </a>
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                    <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="text" name="suburb" placeholder="Suburb" required>
-                    <textarea name="message" placeholder="What services do you need? (e.g. Double driveway, Lawn mow)" rows="4" required></textarea>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Send Quote Request</button>
-                </form>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
+    <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
+
+    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <input type="text" name="name" placeholder="Your Name" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+        <input type="tel" name="phone" placeholder="Phone Number" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+    </div>
+
+    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <input type="email" name="email" placeholder="Email Address" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+        <input type="text" name="suburb" placeholder="Suburb" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+    </div>
+
+    <textarea name="message" placeholder="What services do you need? (e.g. Double driveway, Lawn mow)" rows="4" required style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem; font-family: inherit;"></textarea>
+
+    <button type="submit" class="btn-primary" style="width: 100%; background: #2563eb; color: #ffff00; padding: 18px; border-radius: 12px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; transition: 0.3s;">
+        Send Quote Request
+    </button>
+</form>
             </div>
         </div>
     </section>
