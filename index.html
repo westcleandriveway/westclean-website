@@ -584,6 +584,41 @@
       }
     });
   });
+
+       // This handles closing it automatically when a link is tapped
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navLinks.style.display = 'none';
+      }
+    });
+  });
+
+  // --- POP-UP LIGHTBOX SYSTEM SCRIPTS ---
+  const lightbox = document.getElementById('customLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeLightbox = document.getElementById('closeLightbox');
+
+  // Listens for a tap event on any of your thumbnail layout photos
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex'; // Reveals lightbox panel
+      lightboxImg.src = img.src;       // Sets raw image path to pop-up window
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  // Closes full view overlay when clicking 'X' button
+  closeLightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Closes frame view layout if user clicks out on dark blurred environment zones
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
 </script>
     
 </body>
