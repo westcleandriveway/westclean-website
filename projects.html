@@ -3,59 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recent Projects | WestClean Driveway & Lawn Care</title>
+    <title>Our Projects | WestClean Before & After Gallery</title>
+    <meta name="description" content="See real before and after transformations of our driveway high-pressure cleaning and lawn mowing projects across Western Sydney.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
     <style>
-        :root { --primary-blue: #2563eb; --dark: #0f172a; --white: #ffffff; --soft-blue: #eff6ff; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #475569; margin: 0; background: #f8fafc; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        nav { background: white; padding: 20px 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
-        .project-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-        .project-img { width: 100%; height: 250px; object-fit: cover; background: #ddd; }
-        .project-info { padding: 20px; }
-        .project-tag { font-size: 0.75rem; font-weight: 700; color: var(--primary-blue); text-transform: uppercase; }
-        .btn-back { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary-blue); font-weight: 600; }
+        :root {
+            --primary-blue: #2563eb;
+            --deep-blue: #1e40af;
+            --soft-blue: #eff6ff;
+            --slate: #475569;
+            --dark: #0f172a;
+            --maxw: 1200px;
+            --white: #ffffff;
+            --shadow-md: 0 4px 20px -2px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--slate);
+            background-color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER / BACK TO HOME NAVIGATION */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+        .back-btn:hover { color: var(--deep-blue); }
+
+        /* GALLERY TITLE */
+        .intro-section {
+            text-align: center;
+            padding: 60px 0 40px 0;
+        }
+        .intro-section h1 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        /* MODERN MASONRY/FLEX GRID (Stops all squishing!) */
+        .portfolio-grid {
+            columns: 3 320px; /* Splts into 3 columns, shrinks to 1 on phones automatically */
+            column-gap: 24px;
+            padding-bottom: 80px;
+        }
+
+        .portfolio-item {
+            break-inside: avoid; /* Stops photos from cutting in half between columns */
+            margin-bottom: 24px;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto; /* Natural scaling - absolutely NO squishing */
+            display: block;
+        }
+
+        .item-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #7c3aed; /* Your purple badge */
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .item-caption {
+            padding: 15px 20px;
+            font-weight: 700;
+            color: var(--dark);
+            border-top: 1px solid #f1f5f9;
+        }
+
+        /* LIGHTBOX POP-UP WINDOW */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.97);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox-content {
+            max-width: 95%;
+            max-height: 85%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 25px; right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; text-decoration: none;"><span style="color: #facc15;">West</span><span style="color: var(--primary-blue);">Clean</span></a>
-            <a href="index.html#contact" style="background: var(--primary-blue); color: #ffff00; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 800;">Get Quote</a>
+    <header>
+        <div class="container nav-box">
+            <a href="index.html" class="back-btn">← Back to Homepage</a>
+            <div style="font-weight: 800; color: var(--dark);">WESTCLEAN</div>
         </div>
-    </nav>
+    </header>
 
-    <div class="container" style="padding: 60px 20px;">
-        <a href="index.html" class="btn-back">← Back to Home</a>
-        <h1>Our Recent Transformations</h1>
-        <p>Real results from around Western Sydney. From driveway restorations to precision lawn care.</p>
+    <main class="container">
+        <section class="intro-section">
+            <h1>Our Project Showcase</h1>
+            <p>Real results delivered across Western Sydney. Tap any transformation to view fullscreen.</p>
+        </section>
 
-        <div class="project-grid">
-
-            <div class="project-card">
-                <img src="IMG_4708.jpg" alt="Baulkham Hills Project" class="project-img">
-                <div class="project-info">
-                    <span class="project-tag">Baulkham Hills</span>
-                    <h3>The Full Reveal Transformation</h3>
-                    <p>Complete driveway pressure wash, pergola roof clean, and professional lawn edge. Massive boost to curb appeal!</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="1.png" alt="Driveway Restoration" class="project-img">
-                <div class="project-info">
-                    <span class="project-tag">Seven Hills</span>
-                    <h3>Driveway Deep Clean</h3>
-                    <p>Removed 5+ years of mould and oil stains to reveal the original concrete finish.</p>
-                </div>
+        <div class="portfolio-grid">
+            
+            <div class="portfolio-item">
+                <span class="item-badge">Before & After</span>
+                <img src="1.png" alt="Driveway high pressure cleaning restoration in Blacktown Western Sydney">
+                <div class="item-caption">Driveway Pressure Cleaning - Blacktown</div>
             </div>
 
-        </div>
+            <div class="portfolio-item">
+                <span class="item-badge">Before & After</span>
+                <img src="2.png" alt="Lawn mowing and neat precision edges in Penrith NSW">
+                <div class="item-caption">Lawn Mowing & Edging - Penrith</div>
+            </div>
+
+            <div class="portfolio-item">
+                <span class="item-badge">Before & After</span>
+                <img src="3.png" alt="Concrete patio outdoor restoration cleaning">
+                <div class="item-caption">Patio Hardscape Refresh</div>
+            </div>
+
+            </div>
+    </main>
+
+    <div id="galleryLightbox" class="lightbox">
+        <span class="lightbox-close" id="closeLightbox">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged view">
     </div>
 
-    <footer style="background: var(--dark); color: white; padding: 40px 0; text-align: center;">
-        <p>© 2026 WestClean Driveway & Lawn Care</p>
-    </footer>
+    <script>
+        // Lightbox Brain Script
+        const lightbox = document.getElementById('galleryLightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeLightbox = document.getElementById('closeLightbox');
 
+        document.querySelectorAll('.portfolio-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => { lightbox.style.display = 'none'; });
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) { lightbox.style.display = 'none'; }
+        });
+    </script>
 </body>
 </html>
