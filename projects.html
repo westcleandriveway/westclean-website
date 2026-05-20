@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects | WestClean Before & After Gallery</title>
-    <meta name="description" content="See real before and after transformations of our driveway high-pressure cleaning and lawn mowing projects across Western Sydney.">
+    <title>Our Recent Work & Transformations | WestClean Western Sydney</title>
+    <meta name="description" content="Explore our portfolio of professional driveway pressure cleaning and lawn mowing projects across Blacktown, Penrith, and Western Sydney.">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
     <style>
         :root {
@@ -14,189 +14,303 @@
             --slate: #475569;
             --dark: #0f172a;
             --maxw: 1200px;
+            --border-color: #e2e8f0;
             --white: #ffffff;
             --shadow-md: 0 4px 20px -2px rgba(0,0,0,0.08);
+            --bright-yellow: #ffff00;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6; 
             color: var(--slate);
-            background-color: #f8fafc;
-            line-height: 1.6;
+            background-color: #f8fafc; 
         }
 
-        .container {
-            max-width: var(--maxw);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-        /* HEADER / BACK TO HOME NAVIGATION */
-        header {
-            background: var(--white);
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 700;
-            transition: 0.2s;
-        }
-        .back-btn:hover { color: var(--deep-blue); }
-
-        /* GALLERY TITLE */
-        .intro-section {
+        /* TOP BAR */
+        .top-bar {
+            background: var(--dark);
+            color: var(--bright-yellow);
             text-align: center;
-            padding: 60px 0 40px 0;
-        }
-        .intro-section h1 {
-            font-size: 2.8rem;
-            color: var(--dark);
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        /* MODERN MASONRY/FLEX GRID (Stops all squishing!) */
-        .portfolio-grid {
-            columns: 3 320px; /* Splts into 3 columns, shrinks to 1 on phones automatically */
-            column-gap: 24px;
-            padding-bottom: 80px;
+            padding: 15px 0;
+            font-weight: 900;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid var(--primary-blue);
         }
 
-        .portfolio-item {
-            break-inside: avoid; /* Stops photos from cutting in half between columns */
-            margin-bottom: 24px;
-            background: var(--white);
+        /* NAVIGATION */
+        nav { 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 20px 0; 
+            border-bottom: 1px solid var(--border-color); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; text-decoration: none; }
+        .logo .west { color: #facc15; } 
+        .logo .clean { color: var(--primary-blue); }
+        .nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--slate); font-weight: 600; }
+
+        /* HEADER TITLE HERO */
+        .page-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .page-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; }
+        .page-header p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
+
+        /* --- AUTOMATIC MASONRY GRID SYSTEM --- */
+        .projects-gallery {
+            column-count: 3;
+            column-gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .project-card {
+            background: white;
+            break-inside: avoid;
+            margin-bottom: 25px;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
             position: relative;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-        .portfolio-item:hover {
+        .project-card:hover {
             transform: translateY(-5px);
         }
 
-        .portfolio-item img {
+        .project-card img {
             width: 100%;
-            height: auto; /* Natural scaling - absolutely NO squishing */
+            height: auto;
             display: block;
+            transition: opacity 0.3s;
         }
 
-        .item-badge {
+        .project-badge {
             position: absolute;
             top: 15px;
             right: 15px;
-            background: #7c3aed; /* Your purple badge */
+            background: #7c3aed;
             color: white;
             padding: 6px 14px;
             border-radius: 50px;
             font-size: 0.75rem;
             font-weight: 800;
             text-transform: uppercase;
+            z-index: 2;
         }
 
-        .item-caption {
-            padding: 15px 20px;
-            font-weight: 700;
+        .project-details {
+            padding: 20px;
+            background: white;
+        }
+        .project-details h3 {
+            font-size: 1.2rem;
             color: var(--dark);
-            border-top: 1px solid #f1f5f9;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .project-details p {
+            font-size: 0.95rem;
+            color: var(--slate);
+            line-height: 1.4;
         }
 
-        /* LIGHTBOX POP-UP WINDOW */
+        /* LIGHTBOX POP-UP BACKDROP */
         .lightbox {
-            display: none;
+            display: none; 
             position: fixed;
-            z-index: 2000;
+            z-index: 9999; 
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.97);
+            background: rgba(15, 23, 42, 0.96); 
             justify-content: center;
             align-items: center;
         }
         .lightbox-content {
-            max-width: 95%;
-            max-height: 85%;
-            border-radius: 8px;
-            object-fit: contain;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 12px;
+            object-fit: contain; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         .lightbox-close {
             position: absolute;
-            top: 25px; right: 30px;
+            top: 30px; right: 30px;
             color: white;
-            font-size: 40px;
+            font-size: 44px;
             font-weight: bold;
             cursor: pointer;
         }
+
+        /* RESPONSIVE LAYOUT BREAKPOINTS */
+        @media (max-width: 992px) {
+            .projects-gallery { column-count: 2; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .projects-gallery { column-count: 1; }
+            .page-header h1 { font-size: 2rem; }
+        }
+
+        #menu-toggle {
+            display: none; 
+            background: #2563eb;
+            color: #ffff00;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            #menu-toggle { display: block !important; }
+            .nav-container {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center;
+                padding: 10px 15px;
+                position: relative;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%; left: 0; width: 100%;
+                background: white;
+                padding: 20px 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                gap: 15px;
+            }
+            .nav-cta { width: 90%; text-align: center; margin-top: 10px; }
+        }
+        
+        .btn-primary { background: var(--primary-blue); color: var(--bright-yellow); padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; text-align: center; }
+        footer { background: var(--dark); color: #94a3b8; padding: 60px 0; text-align: center; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container nav-box">
-            <a href="index.html" class="back-btn">← Back to Homepage</a>
-            <div style="font-weight: 800; color: var(--dark);">WESTCLEAN</div>
+    <div class="top-bar">BEAT ANY QUOTED PRICE — USE CODE: WINTER15</div>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><span class="west">West</span><span class="clean">Clean</span></a>
+            <button id="menu-toggle">☰ MENU</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">Our Story</a></li>
+                <li><a href="index.html#pricing">Pricing & Packages</a></li>
+                <li><a href="index.html#gallery">Recent Work</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="index.html#areas">Service Areas</a></li>
+                <li><a href="index.html#contact" style="background: #2563eb; color: #ffff00; padding: 8px 16px; border-radius: 8px; font-weight: 800;">Get Free Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Project Transformations</h1>
+            <p>Real results from local jobs right here in Western Sydney. Tap any photo to see it in full size!</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="intro-section">
-            <h1>Our Project Showcase</h1>
-            <p>Real results delivered across Western Sydney. Tap any transformation to view fullscreen.</p>
-        </section>
+        
+        <div class="projects-gallery">
 
-        <div class="portfolio-grid">
-            
-            <div class="portfolio-item">
-                <span class="item-badge">Before & After</span>
-                <img src="driveway-pressure-cleaning-blacktown.jpeg" alt="Driveway high pressure cleaning restoration in Blacktown Western Sydney">
-                <div class="item-caption">Driveway Pressure Cleaning - Blacktown</div>
+            <div class="project-card">
+                <span class="project-badge">Before & After</span>
+                <img src="driveway-pressure-cleaning-blacktown.jpeg" alt="Before and after high pressure driveway surface cleaning in Blacktown">
+                <div class="project-details">
+                    <h3>Driveway Clean & Refresh</h3>
+                    <p><strong>Location:</strong> Blacktown</p>
+                    <p>Removed years of deep oil stains, dark mold growth, and ground-in dirt buildup to completely restore the home's concrete street appeal.</p>
+                </div>
             </div>
 
-            <div class="portfolio-item">
-                <span class="item-badge">Before & After</span>
-                <img src="lawn-mowing-trimming-penrith.jpeg" alt="Lawn mowing and neat precision edges in Penrith NSW">
-                <div class="item-caption">Lawn Mowing & Edging - Penrith</div>
+            <div class="project-card">
+                <span class="project-badge">Before & After</span>
+                <img src="2.png" alt="Precision lawn mowing and clean edge trimming service">
+                <div class="project-details">
+                    <h3>Precision Lawn Care Maintenance</h3>
+                    <p><strong>Location:</strong> Penrith</p>
+                    <p>Completed a uniform low cut mow, detailed sidewalk edging, and full property debris clearing for a pristine finish.</p>
+                </div>
             </div>
 
-            <div class="portfolio-item">
-                <span class="item-badge">Before & After</span>
-                <img src="concrete-patio-cleaning-western-sydney.jpg" alt="Concrete patio outdoor restoration cleaning">
-                <div class="item-caption">Patio Hardscape Refresh</div>
+            <div class="project-card">
+                <span class="project-badge">Before & After</span>
+                <img src="concrete-patio-cleaning-western-sydney.jpg" alt="High pressure brick patio wash and backyard deck revival">
+                <div class="project-details">
+                    <h3>Backyard Patio Pressure Washing</h3>
+                    <p><strong>Location:</strong> Seven Hills</p>
+                    <p>Revived an outdoor entertainment area by pressure washing stained bricks, removing deep slippery green moss patches safely.</p>
+                </div>
             </div>
 
             </div>
+        
+        <div style="text-align: center; margin-bottom: 80px;">
+            <h3 style="color: var(--dark); font-size: 1.8rem; margin-bottom: 15px;">Want Results Like This For Your Home?</h3>
+            <a href="index.html#contact" class="btn-primary">Get Your Free Quote Instantly</a>
+        </div>
+
     </main>
 
-    <div id="galleryLightbox" class="lightbox">
-        <span class="lightbox-close" id="closeLightbox">&times;</span>
-        <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged view">
+    <div id="customLightbox" class="lightbox">
+        <span class="lightbox-close" id="closeLightbox">×</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged transformation view">
     </div>
 
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.2rem; margin-bottom: 10px;"><strong>WestClean Driveway & Lawn Care</strong> | Western Sydney NSW</p>
+            <p style="opacity:0.8;">westcleandriveway@gmail.com | 0403 079 094</p>
+        </div>
+    </footer>
+
     <script>
-        // Lightbox Brain Script
-        const lightbox = document.getElementById('galleryLightbox');
+        // Mobile Toggle Code
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            if (navLinks.style.display === 'none' || navLinks.style.display === '') {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // Lightbox Pop-Up Engine
+        const lightbox = document.getElementById('customLightbox');
         const lightboxImg = document.getElementById('lightboxImg');
         const closeLightbox = document.getElementById('closeLightbox');
 
-        document.querySelectorAll('.portfolio-item img').forEach(img => {
+        document.querySelectorAll('.project-card img').forEach(img => {
             img.addEventListener('click', () => {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex'; 
+                lightboxImg.src = img.src;       
                 lightboxImg.alt = img.alt;
             });
         });
