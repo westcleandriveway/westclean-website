@@ -99,13 +99,65 @@
         .price { font-size: 2.8rem; font-weight: 800; color: var(--primary-blue); margin: 20px 0; }
 
         /* GALLERY SECTION */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; padding: 20px 0; }
-        .gallery-item { border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); position: relative; }
-        .gallery-item img { width: 100%; display: block; height: 350px; object-fit: cover; transition: 0.5s; }
-        .gallery-item:hover img { transform: scale(1.03); }
-        .gallery-cap { position: absolute; bottom: 25px; left: 25px; background: white; padding: 12px 25px; border-radius: 12px; font-weight: 700; color: var(--dark); box-shadow: var(--shadow-sm); }
-        .compare-label { position: absolute; top: 25px; right: 25px; background: var(--primary-blue); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; }
-
+       /* GALLERY SECTION UPDATES */
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 40px; 
+            padding: 20px 0; 
+        }
+        .gallery-item { 
+            border-radius: 24px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow-md); 
+            position: relative; 
+            background: #ffffff; /* Gives it a neat backdrop */
+        }
+        
+        /* FIXES IMAGE SIZING ISSUE */
+        .gallery-item img { 
+            width: 100%; 
+            display: block; 
+            height: auto; /* Allow image to scale natively instead of forcing 350px */
+            max-height: 450px; /* Limits excessive stretching */
+            object-fit: contain; /* Keeps the whole photo visible without cropping the sides */
+            transition: 0.5s; 
+        }
+        .gallery-item:hover img { transform: scale(1.02); }
+        
+        .gallery-cap { 
+            position: absolute; 
+            bottom: 25px; 
+            left: 25px; 
+            background: white; 
+            padding: 12px 25px; 
+            border-radius: 12px; 
+            font-weight: 700; 
+            color: var(--dark); 
+            box-shadow: var(--shadow-sm); 
+            z-index: 5;
+        }
+        
+        /* NEW: Purple Center Badge */
+        .compare-label { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); /* Centers it exactly in the middle */
+            background: #7c3aed; /* Vibrant Professional Purple */
+            color: white; 
+            padding: 10px 24px; 
+            border-radius: 50px; 
+            font-size: 0.95rem; 
+            font-weight: 800; 
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
+            z-index: 10;
+            pointer-events: none; /* Allows clicks to go through if a user taps it */
+            white-space: nowrap;
+        }
+        
         /* LOCATIONS SECTION WITH MAP */
         .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
         .suburb-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; }
