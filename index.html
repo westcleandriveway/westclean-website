@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WestClean | Driveway Cleaning & Lawn Mowing Western Sydney</title>
-<meta name="description" content="Professional high-pressure driveway cleaning and expert lawn mowing in Blacktown, Penrith, and Western Sydney. Get a free quote from WestClean today!">
-<meta name="keywords" content="driveway cleaning western sydney, lawn mowing blacktown, pressure washing penrith, westclean au">
+    <title>WestClean | Driveway Cleaning & Lawn Mowing Western Sydney</title>
+    <meta name="description" content="Professional high-pressure driveway cleaning and expert lawn mowing in Blacktown, Penrith, and Western Sydney. Get a free quote from WestClean today!">
+    <meta name="keywords" content="driveway cleaning western sydney, lawn mowing blacktown, pressure washing penrith, westclean au">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
     <style>
         :root {
@@ -98,7 +98,7 @@
         .card:hover { transform: translateY(-10px); border-color: var(--primary-blue); box-shadow: var(--shadow-md); }
         .price { font-size: 2.8rem; font-weight: 800; color: var(--primary-blue); margin: 20px 0; }
 
-       /* --- SMOOTH SCROLLING GALLERY --- */
+        /* --- SMOOTH SCROLLING GALLERY --- */
         .gallery-container {
             width: 100%;
             overflow: hidden;
@@ -106,21 +106,20 @@
         }
 
         .gallery-grid { 
-            display: flex; /* Lines up photos horizontally */
+            display: flex; 
             gap: 20px; 
-            overflow-x: auto; /* Gives you the thumb swipe feature */
-            scroll-snap-type: x mandatory; /* Snaps photos into position neatly */
+            overflow-x: auto; 
+            scroll-snap-type: x mandatory; 
             padding: 20px;
             scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
+            -webkit-overflow-scrolling: touch; /* TYPO FIXED */
         }
 
-        /* Hides the ugly scrollbar on phones while keeping the swipe active */
         .gallery-grid::-webkit-scrollbar { display: none; }
         .gallery-grid { -ms-overflow-style: none; scrollbar-width: none; }
 
         .gallery-item { 
-            flex: 0 0 85%; /* Shows one photo and hints at the next one */
+            flex: 0 0 85%; 
             max-width: 380px;
             scroll-snap-align: center;
             border-radius: 18px; 
@@ -131,7 +130,6 @@
             cursor: pointer; 
         }
         
-        /* Forces preview images into a perfect uniform shape without stretching them */
         .gallery-item img { 
             width: 100%; 
             display: block; 
@@ -157,7 +155,7 @@
             position: absolute; 
             top: 15px; 
             right: 15px; 
-            background: #7c3aed; /* Your nice purple box */
+            background: #7c3aed; 
             color: white; 
             padding: 6px 14px; 
             border-radius: 50px; 
@@ -171,7 +169,7 @@
         .lightbox {
             display: none; 
             position: fixed;
-            z-index: 9999; /* Forces it to sit on top of everything else */
+            z-index: 9999; 
             top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(15, 23, 42, 0.95); 
             justify-content: center;
@@ -181,7 +179,7 @@
             max-width: 90%;
             max-height: 80%;
             border-radius: 12px;
-            object-fit: contain; /* Displays your full, raw photo without any cropping */
+            object-fit: contain; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         .lightbox-close {
@@ -193,7 +191,6 @@
             cursor: pointer;
         }
 
-        /* If someone looks on a laptop/desktop, turn off scroll and make it a clean grid */
         @media (min-width: 769px) {
             .gallery-grid {
                 display: grid;
@@ -225,9 +222,9 @@
             .about-image img, .map-container { height: 350px; }
         }
 
-       /* Styling the Hamburger Button */
+        /* Styling the Hamburger Button */
         #menu-toggle {
-            display: none; /* Hide on computers */
+            display: none; 
             background: #2563eb;
             color: #ffff00;
             border: none;
@@ -243,20 +240,20 @@
         @media (max-width: 768px) {
             #menu-toggle {
                 display: block !important;
-                margin: 0 !important; /* Keeps it to the right */
+                margin: 0 !important; 
             }
 
             .nav-container {
                 display: flex !important;
-                flex-direction: row !important; /* Logo left, Button right */
+                flex-direction: row !important; 
                 justify-content: space-between !important;
                 align-items: center;
                 padding: 10px 15px;
-                position: relative; /* Helps dropdown position correctly */
+                position: relative; 
             }
 
             .nav-links {
-                display: none; /* Keep hidden until menu is clicked */
+                display: none; 
                 flex-direction: column;
                 position: absolute;
                 top: 100%;
@@ -268,7 +265,6 @@
                 gap: 15px;
             }
 
-            /* Keeps the Get Quote button prominent */
             .nav-cta {
                 display: inline-block !important;
                 margin-top: 10px !important;
@@ -288,14 +284,14 @@
             <a href="#home" class="logo"><span class="west">West</span><span class="clean">Clean</span></a>
             <button id="menu-toggle">☰ MENU</button>
             <ul class="nav-links">
-               <li><a href="#about">Our Story</a></li>
-<li><a href="#pricing">Pricing & Packages</a></li>
-<li><a href="#gallery">Recent Work</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#areas">Service Areas</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#pricing">Pricing & Packages</a></li>
+                <li><a href="#gallery">Recent Work</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#areas">Service Areas</a></li>
                 <li><a href="#reviews" style="font-weight: bold; color: #fbbc05;">Reviews</a></li>
-        <li><a href="blog/index.html">Blog</a></li>
-<li class="nav-cta"><a href="#contact" style="background: #2563eb; color: #ffff00; padding: 8px 16px; border-radius: 8px; font-weight: 800;">Get Free Quote</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li class="nav-cta"><a href="#contact" style="background: #2563eb; color: #ffff00; padding: 8px 16px; border-radius: 8px; font-weight: 800;">Get Free Quote</a></li>
             </ul>
         </div>
     </nav>
@@ -304,7 +300,7 @@
         <div class="container">
             <h1>Expert Driveway Cleaning & Lawn Mowing in Western Sydney</h1>
             <p style="font-size: 1.4rem; font-weight: 600;">Expert Lawn Mowing & High-Pressure Cleaning</p>
-<p>Serving Blacktown, Penrith, and Western Sydney with professional driveway restoration and property maintenance.</p>
+            <p>Serving Blacktown, Penrith, and Western Sydney with professional driveway restoration and property maintenance.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn-primary">Book Free Quote Now</a>
                 <a href="#about" class="btn-secondary">Explore Services</a>
@@ -312,37 +308,32 @@
         </div>
     </header>
 
-   <section id="about" style="background: #ffffff; padding: 100px 0;">
-    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
-        
-        <div style="flex: 1; min-width: 300px;">
-            <img src="Shiny driveway and suburban home.png" alt="WestClean Services" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px #eff6ff;">
-        </div>
-
-        <div style="flex: 1; min-width: 300px;">
-            <h4 style="color: #2563eb; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 10px;">The WestClean Story</h4>
-            <h2 style="font-size: 2.5rem; color: #0f172a; line-height: 1.2; margin-bottom: 20px;">Local Reliability Meets Professional Results</h2>
-            
-            <p style="font-size: 1.1rem; margin-bottom: 20px;">Based in Western Sydney, we provide property maintenance you can actually rely on. Whether it’s a high-pressure driveway restoration or a precision lawn mow, we treat every home like it’s our own.</p>
-
-            <div style="background: #eff6ff; padding: 20px; border-radius: 12px; border-left: 5px solid #2563eb; margin-bottom: 25px;">
-                <h3 style="margin-top: 0; font-size: 1.2rem;">🎁 Loyalty Program</h3>
-                <p style="margin-bottom: 0;">We value our repeat customers! Ask for your loyalty card at your next service—your <strong>10th standard service is 100% FREE!</strong></p>
+    <section id="about" style="background: #ffffff; padding: 100px 0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="Shiny driveway and suburban home.png" alt="WestClean Services" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px #eff6ff;">
             </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div>
-                    <h5 style="margin-bottom: 5px; font-weight: 700;">✓ Fully Insured</h5>
-                    <p style="font-size: 0.85rem;">Peace of mind for every job.</p>
+            <div style="flex: 1; min-width: 300px;">
+                <h4 style="color: #2563eb; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 10px;">The WestClean Story</h4>
+                <h2 style="font-size: 2.5rem; color: #0f172a; line-height: 1.2; margin-bottom: 20px;">Local Reliability Meets Professional Results</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Based in Western Sydney, we provide property maintenance you can actually rely on. Whether it’s a high-pressure driveway restoration or a precision lawn mow, we treat every home like it’s our own.</p>
+                <div style="background: #eff6ff; padding: 20px; border-radius: 12px; border-left: 5px solid #2563eb; margin-bottom: 25px;">
+                    <h3 style="margin-top: 0; font-size: 1.2rem;">🎁 Loyalty Program</h3>
+                    <p style="margin-bottom: 0;">We value our repeat customers! Ask for your loyalty card at your next service—your <strong>10th standard service is 100% FREE!</strong></p>
                 </div>
-                <div>
-                    <h5 style="margin-bottom: 5px; font-weight: 700;">✓ Local Expertise</h5>
-                    <p style="font-size: 0.85rem;">Serving the Hills & Blacktown area.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h5 style="margin-bottom: 5px; font-weight: 700;">✓ Fully Insured</h5>
+                        <p style="font-size: 0.85rem;">Peace of mind for every job.</p>
+                    </div>
+                    <div>
+                        <h5 style="margin-bottom: 5px; font-weight: 700;">✓ Local Expertise</h5>
+                        <p style="font-size: 0.85rem;">Serving the Hills & Blacktown area.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="pricing" style="padding-bottom: 120px;">
         <div class="container">
@@ -359,29 +350,22 @@
                     <div><h3>Double Driveway Clean</h3><div class="price">$145</div><p>2-car driveway (up to 50m²), edges trimmed, and full high-pressure wash.</p></div>
                     <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Book Now</a>
                 </div>
-                
-<div style="border: 3px solid #facc15; border-radius: 20px; padding: 40px 30px; position: relative; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 15px;">
-    
-    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #facc15; color: #0f172a; padding: 6px 20px; border-radius: 50px; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; z-index: 10;">
-        Most Popular
-    </div>
-
-    <h3 style="font-size: 1.8rem; margin: 0; color: #0f172a; font-weight: 800;">Home Hero Bundle</h3>
-    
-    <div style="font-size: 3rem; font-weight: 800; color: #2563eb; line-height: 1;">$225</div>
-
-    <p style="margin: 5px 0; font-size: 1.1rem; line-height: 1.5; color: #475569;">
-        <strong style="color: #0f172a;">BEST VALUE:</strong> Full Driveway, Front Path, and Back Patio clean.
-    </p>
-
-    <p style="color: #2563eb; font-weight: 700; font-size: 1rem; margin: 0;">
-        + 2x Wheelie Bins Cleaned FREE!
-    </p>
-
-    <a href="#contact" style="display: block; text-align: center; background: #2563eb; color: #ffff00; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.2rem; margin-top: auto;">
-        Claim Offer
-    </a>
-</div>
+                <div style="border: 3px solid #facc15; border-radius: 20px; padding: 40px 30px; position: relative; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 15px;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #facc15; color: #0f172a; padding: 6px 20px; border-radius: 50px; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; z-index: 10;">
+                        Most Popular
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin: 0; color: #0f172a; font-weight: 800;">Home Hero Bundle</h3>
+                    <div style="font-size: 3rem; font-weight: 800; color: #2563eb; line-height: 1;">$225</div>
+                    <p style="margin: 5px 0; font-size: 1.1rem; line-height: 1.5; color: #475569;">
+                        <strong style="color: #0f172a;">BEST VALUE:</strong> Full Driveway, Front Path, and Back Patio clean.
+                    </p>
+                    <p style="color: #2563eb; font-weight: 700; font-size: 1rem; margin: 0;">
+                        + 2x Wheelie Bins Cleaned FREE!
+                    </p>
+                    <a href="#contact" style="display: block; text-align: center; background: #2563eb; color: #ffff00; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.2rem; margin-top: auto;">
+                        Claim Offer
+                    </a>
+                </div>
                 <div class="card">
                     <div><h3>The Full Reveal</h3><div class="price">$300</div><p><strong>ULTIMATE CARE:</strong> Full Driveway & Pathway Clean, plus a Professional Lawn Mow & Edge.</p></div>
                     <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Get Quote</a>
@@ -398,13 +382,12 @@
         </div>
     </section>
 
-   <section id="gallery" style="background: #f1f5f9; padding: 100px 0;">
+    <section id="gallery" style="background: #f1f5f9; padding: 100px 0;">
         <div class="container">
             <div class="section-title" style="text-align: center; margin-bottom: 40px;">
                 <h2 style="font-size: 2.5rem; color: var(--dark); font-weight: 800;">Recent Results</h2>
                 <p>Real transformations from our local Western Sydney projects. Tap any photo to enlarge!</p>
             </div>
-            
             <div class="gallery-container">
                 <div class="gallery-grid">
                     <div class="gallery-item">
@@ -424,7 +407,6 @@
                     </div>
                 </div>
             </div>
-
             <div style="text-align: center; margin-top: 40px;">
                 <a href="projects.html" style="display: inline-block; padding: 16px 32px; background-color: transparent; border: 2px solid #2563eb; color: #2563eb; text-decoration: none; border-radius: 12px; font-weight: 700; transition: all 0.3s ease;">View All Before & After Projects →</a>
             </div>
@@ -432,46 +414,41 @@
     </section>
 
     <div id="customLightbox" class="lightbox">
-        <span class="lightbox-close" id="closeLightbox">&times;</span>
+        <span class="lightbox-close" id="closeLightbox">×</span>
         <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged transformation view">
     </div>
 
     <section id="reviews" style="padding: 60px 20px; background-color: #f9f9f9;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-        <h2 style="margin-bottom: 30px; color: #333;">What Our Customers Say</h2>
-        
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-efad9f3d-10e0-492d-8031-ca0c927cc818" data-elfsight-app-lazy></div>
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="margin-bottom: 30px; color: #333;">What Our Customers Say</h2>
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-efad9f3d-10e0-492d-8031-ca0c927cc818" data-elfsight-app-lazy></div>
         </div>
 </section>
 
-<section id="areas" style="background: #ffffff; padding: 100px 0; border-top: 1px solid #e2e8f0;">
-    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
-        
-        <div style="flex: 1; min-width: 300px; height: 400px;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106093.07686144865!2d150.819448!3d-33.7715454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129853920977e1%3A0x5017d681632ad40!2sBlacktown%20NSW%202148!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" 
-                width="100%" height="100%" style="border:0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
-        <div style="flex: 1; min-width: 300px;">
-            <h4 style="color: #2563eb; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 10px;">Our Service Area</h4>
-            <h2 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 20px;">Western Sydney Specialists</h2>
-            <p style="margin-bottom: 25px; font-size: 1.1rem; color: #475569;">Based in Blacktown, we serve all neighboring suburbs with pride. Click a suburb below for local details:</p>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="baulkham-hills.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Baulkham Hills</a>
-                <a href="seven-hills.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Seven Hills</a>
-                <a href="kings-langley.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Kings Langley</a>
-                <a href="glenwood.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Glenwood</a>
-                <a href="the-ponds.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">The Ponds</a>
-                <a href="penrith.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Penrith</a>
+    <section id="areas" style="background: #ffffff; padding: 100px 0; border-top: 1px solid #e2e8f0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px; height: 400px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106103.96791572972!2d150.8407425219965!3d-33.792942407466854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12999e525f0ad9%3A0x5017d681632e1d0!2sBlacktown%20NSW!5e0!3m2!1sen!2sau!4v1716200000000!5m2!1sen!2sau" 
+                    width="100%" height="100%" style="border:0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            
-            <p style="margin-top: 30px; font-weight: 700; color: #0f172a; font-size: 1.1rem;">Serving all of Western Sydney!</p>
-            <p style="font-size: 0.9rem; color: #64748b;">Blacktown • Stanhope Gardens • Quakers Hill • Schofields • & Surrounds</p>
+            <div style="flex: 1; min-width: 300px;">
+                <h4 style="color: #2563eb; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 10px;">Our Service Area</h4>
+                <h2 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 20px;">Western Sydney Specialists</h2>
+                <p style="margin-bottom: 25px; font-size: 1.1rem; color: #475569;">Based in Blacktown, we serve all neighboring suburbs with pride. Click a suburb below for local details:</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <a href="baulkham-hills.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Baulkham Hills</a>
+                    <a href="seven-hills.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Seven Hills</a>
+                    <a href="kings-langley.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Kings Langley</a>
+                    <a href="glenwood.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Glenwood</a>
+                    <a href="the-ponds.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">The Ponds</a>
+                    <a href="penrith.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Penrith</a>
+                </div>
+                <p style="margin-top: 30px; font-weight: 700; color: #0f172a; font-size: 1.1rem;">Serving all of Western Sydney!</p>
+                <p style="font-size: 0.9rem; color: #64748b;">Blacktown • Stanhope Gardens • Quakers Hill • Schofields • & Surrounds</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="contact">
         <div class="container">
@@ -480,77 +457,62 @@
                 <p>Most quotes provided instantly via photo!</p>
             </div>
             <div class="contact-box">
-    <a href="https://wa.me/61403079094" style="display: block; background: #6dd47e; color: white; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 700; margin-bottom: 15px; text-align: center;">
-        <i data-lucide="message-square"></i> WhatsApp Photo to 0403 079 094 for Instant Quote!
-    </a>
-
-    <a href="tel:0403079094" style="display: block; background: #6dd47e; color: white; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 700; margin-bottom: 15px; text-align: center;">
-        Call Directly: 0403 079 094
-    </a>
-
-    <p style="text-align: center; margin-bottom: 30px; color: #475569;">
-        Or you can email us: <a href="mailto:westcleandriveway@gmail.com" style="color: #2563eb; font-weight: 700; text-decoration: underline;">westcleandriveway@gmail.com</a>
-    </p>
-
-    <form action="https://api.web3forms.com/submit" ...
+                <a href="https://wa.me/61403079094" style="display: block; background: #6dd47e; color: white; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 700; margin-bottom: 15px; text-align: center;">
+                    WhatsApp Photo to 0403 079 094 for Instant Quote!
                 </a>
+                <a href="tel:0403079094" style="display: block; background: #6dd47e; color: white; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 700; margin-bottom: 15px; text-align: center;">
+                    Call Directly: 0403 079 094
+                </a>
+                <p style="text-align: center; margin-bottom: 30px; color: #475569;">
+                    Or you can email us: <a href="mailto:westcleandriveway@gmail.com" style="color: #2563eb; font-weight: 700; text-decoration: underline;">westcleandriveway@gmail.com</a>
+                </p>
+
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
-    <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
-
-    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-        <input type="text" name="name" placeholder="Your Name" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
-        <input type="tel" name="phone" placeholder="Phone Number" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
-    </div>
-
-    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-        <input type="email" name="email" placeholder="Email Address" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
-        <input type="text" name="suburb" placeholder="Suburb" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
-    </div>
-
-    <textarea name="message" placeholder="What services do you need? (e.g. Double driveway, Lawn mow)" rows="4" required style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem; font-family: inherit;"></textarea>
-
-    <button type="submit" class="btn-primary" style="width: 100%; background: #2563eb; color: #ffff00; padding: 18px; border-radius: 12px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; transition: 0.3s;">
-        Send Quote Request
-    </button>
-</form>
+                    <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <input type="text" name="name" placeholder="Your Name" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+                        <input type="tel" name="phone" placeholder="Phone Number" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <input type="email" name="email" placeholder="Email Address" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+                        <input type="text" name="suburb" placeholder="Suburb" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
+                    </div>
+                    <textarea name="message" placeholder="What services do you need? (e.g. Double driveway, Lawn mow)" rows="4" required style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem; font-family: inherit;"></textarea>
+                    <button type="submit" class="btn-primary" style="width: 100%; background: #2563eb; color: #ffff00; padding: 18px; border-radius: 12px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; transition: 0.3s;">
+                        Send Quote Request
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
     <section id="faq" style="background: #f8fafc; padding: 100px 0; border-top: 1px solid #e2e8f0;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <h2 style="text-align: center; font-size: 2.2rem; color: #0f172a; margin-bottom: 50px;">Common Questions</h2>
-        
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-            
-            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-                <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Do I need to provide anything for the service?</h4>
-                <p style="margin-bottom: 0; color: #475569;">For pressure washing, we just need access to an <strong>external water tap</strong>. We bring all our own professional-grade hoses, power equipment, and fuel. For lawn mowing, we are 100% self-sufficient.</p>
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.2rem; color: #0f172a; margin-bottom: 50px;">Common Questions</h2>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Do I need to provide anything for the service?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">For pressure washing, we just need access to an <strong>external water tap</strong>. We bring all our own professional-grade hoses, power equipment, and fuel. For lawn mowing, we are 100% self-sufficient.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Do I need to be home during the clean?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">Not at all! As long as we have access to the areas being cleaned and a water tap, many of our customers are at work while we transform their property. We can send you "After" photos via WhatsApp once we finish.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Are you insured?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">Yes. WestClean is fully insured, giving you total peace of mind while we are working on your property. We treat every home with the utmost care and respect.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">How long does a typical driveway clean take?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">Most standard driveways take between <strong>1.5 to 3 hours</strong> depending on the size and the level of buildup. We don't rush—we make sure every stain is addressed before we pack up.</p>
+                </div>
             </div>
-
-            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-                <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Do I need to be home during the clean?</h4>
-                <p style="margin-bottom: 0; color: #475569;">Not at all! As long as we have access to the areas being cleaned and a water tap, many of our customers are at work while we transform their property. We can send you "After" photos via WhatsApp once we finish.</p>
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-weight: 600;">Have another question?</p>
+                <a href="https://wa.me/61403079094" style="color: #2563eb; font-weight: 700; text-decoration: underline;">Message us on WhatsApp</a>
             </div>
-
-            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-                <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Are you insured?</h4>
-                <p style="margin-bottom: 0; color: #475569;">Yes. WestClean is fully insured, giving you total peace of mind while we are working on your property. We treat every home with the utmost care and respect.</p>
-            </div>
-
-            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-                <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">How long does a typical driveway clean take?</h4>
-                <p style="margin-bottom: 0; color: #475569;">Most standard driveways take between <strong>1.5 to 3 hours</strong> depending on the size and the level of buildup. We don't rush—we make sure every stain is addressed before we pack up.</p>
-            </div>
-
         </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-            <p style="font-weight: 600;">Have another question?</p>
-            <a href="https://wa.me/61403079094" style="color: #2563eb; font-weight: 700; text-decoration: underline;">Message us on WhatsApp</a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer>
         <div class="container">
@@ -561,65 +523,50 @@
 
     <script>lucide.createIcons();</script>
    
-   <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
 
-  // This handles the button click to Open or Close
-  menuToggle.addEventListener('click', () => {
-    // Check if it's currently hidden or not set yet
-    if (navLinks.style.display === 'none' || navLinks.style.display === '') {
-      navLinks.style.display = 'flex';
-      navLinks.style.flexDirection = 'column';
-    } else {
-      navLinks.style.display = 'none';
-    }
-  });
+      menuToggle.addEventListener('click', () => {
+        if (navLinks.style.display === 'none' || navLinks.style.display === '') {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+        } else {
+          navLinks.style.display = 'none';
+        }
+      });
 
-  // This handles closing it automatically when a link is tapped
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        navLinks.style.display = 'none';
-      }
-    });
-  });
+      // CLEANED UP DUPLICATE LINK EVENT LOOPS HERE
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            navLinks.style.display = 'none';
+          }
+        });
+      });
 
-       // This handles closing it automatically when a link is tapped
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        navLinks.style.display = 'none';
-      }
-    });
-  });
+      // --- POP-UP LIGHTBOX SYSTEM SCRIPTS ---
+      const lightbox = document.getElementById('customLightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const closeLightbox = document.getElementById('closeLightbox');
 
-  // --- POP-UP LIGHTBOX SYSTEM SCRIPTS ---
-  const lightbox = document.getElementById('customLightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const closeLightbox = document.getElementById('closeLightbox');
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'flex'; 
+          lightboxImg.src = img.src;       
+          lightboxImg.alt = img.alt;
+        });
+      });
 
-  // Listens for a tap event on any of your thumbnail layout photos
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.style.display = 'flex'; // Reveals lightbox panel
-      lightboxImg.src = img.src;       // Sets raw image path to pop-up window
-      lightboxImg.alt = img.alt;
-    });
-  });
+      closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
 
-  // Closes full view overlay when clicking 'X' button
-  closeLightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-
-  // Closes frame view layout if user clicks out on dark blurred environment zones
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      lightbox.style.display = 'none';
-    }
-  });
-</script>
-    
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 </html>
