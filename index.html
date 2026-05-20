@@ -127,63 +127,58 @@
             .about-image img, .map-container { height: 350px; }
         }
 
-        /* Styling the Hamburger Button */
-#menu-toggle {
-    display: none; /* Hide on computers */
-    background: #2563eb;
-    color: #ffff00;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 10px auto;
-}
+       /* Styling the Hamburger Button */
+        #menu-toggle {
+            display: none; /* Hide on computers */
+            background: #2563eb;
+            color: #ffff00;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px auto;
+        }
 
-/* Make it show up on phones */
-@media (max-width: 768px) {
-    #menu-toggle {
-        display: block !important;
-    }
-}
-        
         /* Combined Mobile Navigation Fix */
-@media (max-width: 768px) {
-    .nav-container {
-    display: flex !important;
-    flex-direction: row !important; /* This keeps Logo left, Button right */
-    justify-content: space-between !important;
-    align-items: center;
-    padding: 10px 15px;
-    position: relative; /* Helps the dropdown menu position itself */
-}
+        @media (max-width: 768px) {
+            #menu-toggle {
+                display: block !important;
+                margin: 0 !important; /* Keeps it to the right */
+            }
 
-    #menu-toggle {
-        display: block !important;
-        margin: 0 !important; /* Keeps it to the right */
-    }
+            .nav-container {
+                display: flex !important;
+                flex-direction: row !important; /* Logo left, Button right */
+                justify-content: space-between !important;
+                align-items: center;
+                padding: 10px 15px;
+                position: relative; /* Helps dropdown position correctly */
+            }
 
-    .nav-links {
-        display: none; /* Keep it hidden until the button is clicked */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-}
+            .nav-links {
+                display: none; /* Keep hidden until menu is clicked */
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                gap: 15px;
+            }
 
-    /* Keeps the Get Quote button prominent */
-    .nav-cta {
-        display: inline-block !important;
-        margin-top: 10px !important;
-        width: 90%;
-    }
-}
+            /* Keeps the Get Quote button prominent */
+            .nav-cta {
+                display: inline-block !important;
+                margin-top: 10px !important;
+                width: 90%;
+                text-align: center;
+            }
+        }
+        
     </style>
 </head>
 <body>
