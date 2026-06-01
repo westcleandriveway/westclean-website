@@ -67,10 +67,54 @@
             color: white;
             padding: 80px 0;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         .page-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; }
         .page-header p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
+
+        /* FEATURED FULL REVEAL PACKAGE ROW */
+        .featured-project {
+            background: white; 
+            border-radius: 16px; 
+            box-shadow: var(--shadow-md); 
+            margin-bottom: 60px; 
+            overflow: hidden; 
+            border: 1px solid var(--border-color);
+        }
+        .featured-header {
+            padding: 30px; 
+            border-bottom: 1px solid var(--border-color); 
+            background: #f8fafc;
+        }
+        .featured-badge {
+            background: var(--primary-blue); 
+            color: white; 
+            padding: 6px 14px; 
+            border-radius: 20px; 
+            font-size: 0.8rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em;
+            display: inline-block;
+        }
+        .featured-body { padding: 30px; }
+        .featured-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px; 
+            margin: 25px 0; 
+        }
+        .featured-card {
+            background: #f8fafc; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .featured-card:hover { transform: translateY(-3px); }
+        .featured-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
+        .featured-card-desc { padding: 15px; background: white; border-top: 1px solid var(--border-color); }
 
         /* --- AUTOMATIC MASONRY GRID SYSTEM --- */
         .projects-gallery {
@@ -91,16 +135,8 @@
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: opacity 0.3s;
-        }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card img { width: 100%; height: auto; display: block; }
 
         .project-badge {
             position: absolute;
@@ -116,21 +152,9 @@
             z-index: 2;
         }
 
-        .project-details {
-            padding: 20px;
-            background: white;
-        }
-        .project-details h3 {
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-        .project-details p {
-            font-size: 0.95rem;
-            color: var(--slate);
-            line-height: 1.4;
-        }
+        .project-details { padding: 20px; background: white; }
+        .project-details h3 { font-size: 1.2rem; color: var(--dark); margin-bottom: 8px; font-weight: 700; }
+        .project-details p { font-size: 0.95rem; color: var(--slate); line-height: 1.4; }
 
         /* LIGHTBOX POP-UP BACKDROP */
         .lightbox {
@@ -142,21 +166,8 @@
             justify-content: center;
             align-items: center;
         }
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 12px;
-            object-fit: contain; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 30px; right: 30px;
-            color: white;
-            font-size: 44px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+        .lightbox-content { max-width: 90%; max-height: 80%; border-radius: 12px; object-fit: contain; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .lightbox-close { position: absolute; top: 30px; right: 30px; color: white; font-size: 44px; font-weight: bold; cursor: pointer; }
 
         /* RESPONSIVE LAYOUT BREAKPOINTS */
         @media (max-width: 992px) {
@@ -183,24 +194,8 @@
 
         @media (max-width: 768px) {
             #menu-toggle { display: block !important; }
-            .nav-container {
-                display: flex !important;
-                justify-content: space-between !important;
-                align-items: center;
-                padding: 10px 15px;
-                position: relative;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%; left: 0; width: 100%;
-                background: white;
-                padding: 20px 0;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                gap: 15px;
-            }
-            .nav-cta { width: 90%; text-align: center; margin-top: 10px; }
+            .nav-container { display: flex !important; justify-content: space-between !important; align-items: center; padding: 10px 15px; position: relative; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: white; padding: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); gap: 15px; }
         }
         
         .btn-primary { background: var(--primary-blue); color: var(--bright-yellow); padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; text-align: center; }
@@ -218,9 +213,8 @@
             <ul class="nav-links">
                 <li><a href="index.html#about">Our Story</a></li>
                 <li><a href="index.html#pricing">Pricing & Packages</a></li>
-                <li><a href="index.html#gallery">Recent Work</a></li>
+                <li><a href="projects.html">Recent Work</a></li>
                 <li><a href="index.html#faq">FAQ</a></li>
-                <li><a href="index.html#areas">Service Areas</a></li>
                 <li><a href="index.html#contact" style="background: #2563eb; color: #ffff00; padding: 8px 16px; border-radius: 8px; font-weight: 800;">Get Free Quote</a></li>
             </ul>
         </div>
@@ -235,152 +229,8 @@
 
     <main class="container">
         
-        <div class="projects-gallery">
-
-            <div class="project-card" style="background: white; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; overflow: hidden; border: 1px solid #e2e8f0;">
-    <div style="padding: 30px; border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
-        <span style="background: #2563eb; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">The Full Reveal Package</span>
-        <h3 style="font-size: 1.8rem; color: #0f172a; margin-top: 10px; font-weight: 800;">Complete Property Transformation — Baulkham Hills</h3>
-        <p style="color: #64748b; font-size: 1rem; margin-top: 5px;"><strong>Services Completed:</strong> Premium Pressure Washing, Professional Lawn Care, Hedge Trimming & Side-Passage Weeding</p>
-    </div>
-
-    <div style="padding: 30px;">
-        <p style="font-size: 1.1rem; color: #475569; margin-bottom: 25px; line-height: 1.6;">
-            We recently undertook a comprehensive exterior property overhaul in <strong>Baulkham Hills</strong>. The property required multi-tier care across hard surfaces, structural garden spaces, and overgrown side drainage paths. Using a combination of tactical high-pressure machinery and mechanical trimming tools, we completely revitalized the home's street appeal and outdoor utility.
-        </p>
-
-        <h4 style="color: #0f172a; margin-bottom: 15px; font-weight: 700; font-size: 1.2rem;">Project Transformation Gallery:</h4>
-        <div class="project-gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px;">
-            
-            <div style="background: #f8fafc; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
-                <img src="driveway-cleaning-baulkham-hills-1.jpeg" alt="Driveway and pathway deep blast restoration in Baulkham Hills by WestClean" style="width: 100%; height: 260px; object-fit: cover;">
-                <div style="padding: 15px;">
-                    <h5 style="color: #0f172a; margin-bottom: 5px; font-weight: 700;">Driveway & Pathway Restoration</h5>
-                    <p style="font-size: 0.9rem; color: #64748b;">Deep high-pressure blast completely eliminating years of embedded dirt, dark organic moss, and slick weather grime.</p>
-                </div>
-            </div>
-
-            <div style="background: #f8fafc; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
-                <img src="lawn-care-edging-baulkham-hills.jpeg" alt="Professional lawn mowing and pristine yard clean up in Baulkham Hills" style="width: 100%; height: 260px; object-fit: cover;">
-                <div style="padding: 15px;">
-                    <h5 style="color: #0f172a; margin-bottom: 5px; font-weight: 700;">Precision Turf & Lawn Care</h5>
-                    <p style="font-size: 0.9rem; color: #64748b;">Mowed uniform flat-stripes down the entire turf area, followed by neat vertical trimmings around edges and structural pillars.</p>
-                </div>
-            </div>
-
-            <div style="background: #f8fafc; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
-                <img src="patio-pressure-washing-baulkham-hills.jpeg" alt="Side passage clearing, weeding, and pebble detailing in Baulkham Hills" style="width: 100%; height: 260px; object-fit: cover;">
-                <div style="padding: 15px;">
-                    <h5 style="color: #0f172a; margin-bottom: 5px; font-weight: 700;">Side Passage Detail & Weeding</h5>
-                    <p style="font-size: 0.9rem; color: #64748b;">Thorough physical root extraction of invasive weeds growing through the decorative river stone drainage paths.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 20px; border-radius: 0 12px 12px 0;">
-            <h4 style="color: #1e3a8a; margin-bottom: 10px; font-weight: 700;">Key Transformation Highlights:</h4>
-            <ul style="margin: 0; padding-left: 20px; color: #1e40af;">
-                <li style="margin-bottom: 6px;"><strong>Safety First:</strong> Fully removed slippery biological growth and green slime hazards from back entertainment slabs.</li>
-                <li style="margin-bottom: 6px;"><strong>Pebble Rejuvenation:</strong> Hand-cleared thick weed patches spreading across the water tank pathways to leave a pristine pebble finish.</li>
-                <li style="margin-bottom: 0;"><strong>Hedge & Bed Shaping:</strong> Pruned, lowered, and squared-off prominent front garden perimeter hedges to open natural light to windows.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-            
-            <div class="project-card">
-                <span class="project-badge">Before & After</span>
-                <img src="driveway-pressure-cleaning-blacktown.jpeg" alt="Before and after high pressure driveway surface cleaning in Blacktown">
-                <div class="project-details">
-                    <h3>Driveway Clean & Refresh</h3>
-                    <p><strong>Location:</strong> Blacktown</p>
-                    <p>Removed years of deep oil stains, dark mold growth, and ground-in dirt buildup to completely restore the home's concrete street appeal.</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <span class="project-badge">Before & After</span>
-                <img src="lawn-mowing-trimming-penrith.jpeg" alt="Precision lawn mowing and clean edge trimming service">
-                <div class="project-details">
-                    <h3>Precision Lawn Care Maintenance</h3>
-                    <p><strong>Location:</strong> Penrith</p>
-                    <p>Completed a uniform low cut mow, detailed sidewalk edging, and full property debris clearing for a pristine finish.</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <span class="project-badge">Before & After</span>
-                <img src="concrete-patio-cleaning-western-sydney.jpg" alt="High pressure brick patio wash and backyard deck revival">
-                <div class="project-details">
-                    <h3>Backyard Patio Pressure Washing</h3>
-                    <p><strong>Location:</strong> Seven Hills</p>
-                    <p>Revived an outdoor entertainment area by pressure washing stained bricks, removing deep slippery green moss patches safely.</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <span class="project-badge">Before & After</span>
-                <img src="driveway-pressure-cleaning-glenmore-park.jpeg" alt="Before and after concrete driveway pressure washing and oil stain removal restoration in Glenmore Park by WestClean">
-                <div class="project-details">
-                    <h3>Driveway Cleaning & Oil Stain Removal</h3>
-                    <p><strong>Location:</strong> Glenmore Park</p>
-                    <p>Treated a heavily discolored concrete driveway by drawing out deep, embedded vehicle oil stains using professional-grade degreasers, followed by a full high-pressure surface wash to restore a clean, uniform look.</p>
-                </div>
-            </div>
-
-            </div>
-        
-        <div style="text-align: center; margin-bottom: 80px;">
-            <h3 style="color: var(--dark); font-size: 1.8rem; margin-bottom: 15px;">Want Results Like This For Your Home?</h3>
-            <a href="index.html#contact" class="btn-primary">Get Your Free Quote Instantly</a>
-        </div>
-
-    </main>
-
-    <div id="customLightbox" class="lightbox">
-        <span class="lightbox-close" id="closeLightbox">×</span>
-        <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged transformation view">
-    </div>
-
-    <footer>
-        <div class="container">
-            <p style="font-size: 1.2rem; margin-bottom: 10px;"><strong>WestClean Driveway & Lawn Care</strong> | Western Sydney NSW</p>
-            <p style="opacity:0.8;">westcleandriveway@gmail.com | 0403 079 094</p>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Toggle Code
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            if (navLinks.style.display === 'none' || navLinks.style.display === '') {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-            } else {
-                navLinks.style.display = 'none';
-            }
-        });
-
-        // Lightbox Pop-Up Engine
-        const lightbox = document.getElementById('customLightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const closeLightbox = document.getElementById('closeLightbox');
-
-        document.querySelectorAll('.project-card img').forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.style.display = 'flex'; 
-                lightboxImg.src = img.src;       
-                lightboxImg.alt = img.alt;
-            });
-        });
-
-        closeLightbox.addEventListener('click', () => { lightbox.style.display = 'none'; });
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) { lightbox.style.display = 'none'; }
-        });
-    </script>
-</body>
-</html>
+        <section class="featured-project">
+            <div class="featured-header">
+                <span class="featured-badge">The Full Reveal Package</span>
+                <h2 style="font-size: 1.8rem; color: #0f172a; margin-top: 10px; font-weight: 800;">Complete Property Transformation — Baulkham Hills</h2>
+                <p style
