@@ -286,6 +286,36 @@
             
             <div class="project-card">
                 <span class="project-badge">Before & After</span>
+                <img src="driveway-cleaning-glenmore-park.jpeg" alt="High pressure concrete driveway cleaning and oil stain removal restoration in Glenmore Park by WestClean">
+                <div class="project-details">
+                    <h3>Driveway Cleaning & Oil Treatment</h3>
+                    <p><strong>Location:</strong> Glenmore Park</p>
+                    <p>Pre-treated with commercial degreasers to lift deep vehicle oil stains, followed by a professional high-pressure surface blast to restore a uniform concrete look.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Before & After</span>
+                <img src="driveway-cleaning-penrith.jpeg" alt="Residential driveway high pressure washing and grime removal restoration in Penrith by WestClean">
+                <div class="project-details">
+                    <h3>Driveway Mold & Grime Deep Clean</h3>
+                    <p><strong>Location:</strong> Penrith</p>
+                    <p>Stripped away thick layers of embedded weather soot, dark tree tracking stains, and slippery biological mold growth across a prominent front driveway entrance.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Before & After</span>
+                <img src="driveway-cleaning-penrith-2.jpeg" alt="Long concrete entry driveway power washing treatment in Penrith">
+                <div class="project-details">
+                    <h3>Full Concrete Entrance Cleansing</h3>
+                    <p><strong>Location:</strong> Penrith</p>
+                    <p>Completed a comprehensive chemical pre-treatment and high-pressure rotational sweep along a long concrete driveway to extract deep-seated environmental grime.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Before & After</span>
                 <img src="driveway-pressure-cleaning-blacktown.jpeg" alt="Before and after high pressure driveway surface cleaning in Blacktown">
                 <div class="project-details">
                     <h3>Driveway Clean & Refresh</h3>
@@ -311,16 +341,6 @@
                     <h3>Backyard Patio Pressure Washing</h3>
                     <p><strong>Location:</strong> Seven Hills</p>
                     <p>Revived an outdoor entertainment area by pressure washing stained bricks, removing deep slippery green moss patches safely.</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <span class="project-badge">Before & After</span>
-                <img src="driveway-pressure-cleaning-glenmore-park.jpeg" alt="Before and after concrete driveway pressure washing and oil stain removal restoration in Glenmore Park by WestClean">
-                <div class="project-details">
-                    <h3>Driveway Cleaning & Oil Stain Removal</h3>
-                    <p><strong>Location:</strong> Glenmore Park</p>
-                    <p>Treated a heavily discolored concrete driveway by drawing out deep, embedded vehicle oil stains using professional-grade degreasers, followed by a full high-pressure surface wash to restore a clean, uniform look.</p>
                 </div>
             </div>
 
@@ -364,7 +384,7 @@
         const lightboxImg = document.getElementById('lightboxImg');
         const closeLightbox = document.getElementById('closeLightbox');
 
-        document.querySelectorAll('.project-card img, .featured-card img').forEach(img => {
+        document.querySelectorAll('.project-card img, .featured-project img').forEach(img => {
             img.addEventListener('click', () => {
                 lightbox.style.display = 'flex'; 
                 lightboxImg.src = img.src;       
