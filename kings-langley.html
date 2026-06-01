@@ -3,63 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Driveway Cleaning & Lawn Edging Kings Langley | WestClean</title>
-    <meta name="description" content="Kings Langley's choice for premium property maintenance. Specializing in driveway restoration and precision lawn mowing.">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+    <title>Lawn Mowing & Pressure Cleaning Kings Langley | WestClean</title>
+    <meta name="description" content="Premium property maintenance in Kings Langley. Professional driveway high-pressure washing, brick patio cleaning, and precision lawn mowing. Local and fully insured.">
     <style>
-        :root { --primary-blue: #2563eb; --dark: #0f172a; --white: #ffffff; --soft-blue: #eff6ff; --bright-yellow: #ffff00; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #475569; margin: 0; background: #f8fafc; }
+        :root { 
+            --primary-blue: #2563eb; 
+            --dark: #0f172a; 
+            --white: #ffffff; 
+            --slate: #475569;
+            --border-color: #e2e8f0;
+            --bright-yellow: #ffff00; 
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--slate); background: #f8fafc; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .hero { background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('1724127426048-driveway-cleaning.jpg'); background-size: cover; color: white; padding: 100px 0; text-align: center; }
-        .btn-primary { background: var(--primary-blue); color: var(--bright-yellow); padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; }
-        .transformation-box { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin: -50px auto 50px; position: relative; z-index: 10; }
-        .testimonial-card { background: #f1f5f9; padding: 25px; border-radius: 15px; border-left: 5px solid var(--primary-blue); margin-top: 30px; }
+        
+        /* NAVIGATION BAR */
+        nav { background: white; padding: 20px 0; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; text-decoration: none; }
+        .logo .west { color: #facc15; } .logo .clean { color: var(--primary-blue); }
+        .back-link { color: var(--primary-blue); font-weight: 600; text-decoration: none; }
+
+        /* HERO PANEL */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; color: white; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; color: #cbd5e1; }
+        .btn-primary { background: var(--primary-blue); color: var(--bright-yellow); padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; font-size: 1.1rem; }
+
+        /* MAIN BODY WRAPPER */
+        .transformation-box { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin: -40px auto 60px; position: relative; z-index: 10; border: 1px solid var(--border-color); }
+        .transformation-box h2 { color: var(--dark); font-size: 2rem; margin-bottom: 15px; font-weight: 800; }
+        
+        /* RESPONSIVE PORTFOLIO PHOTOGRAPHY GRID */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .gallery-item { background: #f8fafc; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; }
+        .gallery-item img { width: 100%; height: 340px; object-fit: cover; display: block; }
+        .gallery-desc { padding: 20px; flex-grow: 1; background: white; border-top: 1px solid var(--border-color); }
+        .gallery-desc h4 { color: var(--dark); font-size: 1.2rem; margin-bottom: 8px; font-weight: 700; }
+        .gallery-desc p { font-size: 0.95rem; color: var(--slate); line-height: 1.5; }
+
+        footer { background: var(--dark); color: white; padding: 50px 0; text-align: center; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <nav style="background: white; padding: 20px 0; border-bottom: 1px solid #e2e8f0;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="font-size: 1.8rem; font-weight: 800; text-decoration: none;"><span style="color: #facc15;">West</span><span style="color: var(--primary-blue);">Clean</span></a>
-            <a href="index.html" style="color: var(--primary-blue); font-weight: 600; text-decoration: none;">← Home</a>
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><span class="west">West</span><span class="clean">Clean</span></a>
+            <a href="index.html" class="back-link">← Back to Home</a>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
             <h1>Kings Langley Property Maintenance</h1>
-            <p>Reliable lawn care and exterior cleaning for your local neighborhood.</p>
-            <a href="https://wa.me/61403079094" class="btn-primary">Get an Instant Quote</a>
+            <p>Providing pristine high-pressure surface cleaning and reliable, expert lawn mowing services across Kings Langley and surrounding areas.</p>
+            <a href="index.html#contact" class="btn-primary">Request a Free Kings Langley Quote</a>
         </div>
     </header>
 
-    <div class="container">
+    <main class="container">
         <div class="transformation-box">
-            <h2>Local Service in Kings Langley</h2>
-            <p>As your Kings Langley locals, we pride ourselves on making the neighborhood look its best. We specialize in removing stubborn driveway stains and keeping those lush Kings Langley lawns perfectly edged.</p>
-            
-            <div class="testimonial-card">
-                <p style="font-style: italic; color: #1e293b;">"Absolutely brilliant service. My driveway looks brand new and the lawn is the best it's ever looked. Highly recommend WestClean for anyone in the area!"</p>
-                <p style="margin-top: 10px; font-weight: 700; color: var(--primary-blue);">⭐⭐⭐⭐⭐ — Local Customer</p>
-            </div>
+            <h2>Recent Transformation Work in Kings Langley</h2>
+            <p>Our team recently delivered high-end outdoor structural detailing for a residential property in <strong>Kings Langley</strong>. This multi-tier project showcases our specialized property services:</p>
+            <ul style="margin: 20px 0; padding-left: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Driveway Cleansing:</strong> Eliminating deep grime build-ups and weather discoloration across front concrete spaces.</li>
+                <li style="margin-bottom: 10px;"><strong>Patio Mold Stripping:</strong> Targeted blast washes along backyard brick surfaces to eliminate slippery biological hazards.</li>
+                <li style="margin-bottom: 10px;"><strong>Professional Lawn Tidy:</strong> Even grass mows detailed out with precision vertical border edging against sidewalks.</li>
+            </ul>
 
-            <div style="margin-top: 40px;">
-                <h3>Our Core Services:</h3>
-                <ul style="padding-left: 20px;">
-                    <li>High-Pressure Driveway & Patio Cleaning</li>
-                    <li>Precision Lawn Mowing & Professional Edging</li>
-                    <li>Soft-Wash House & Render Cleaning</li>
-                    <li>End-of-Lease Property Refresh Bundles</li>
-                </ul>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="driveway-pressure-cleaning-blacktown.jpeg" alt="High pressure concrete driveway surface cleaning restoration in Kings Langley by WestClean">
+                    <div class="gallery-desc">
+                        <h4>Driveway High-Pressure Cleaning</h4>
+                        <p>Deep surface blasting to lift years of embedded soot, dark environmental stains, and weather discoloration to restore street appeal.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="concrete-patio-cleaning-western-sydney.jpg" alt="Before and after brick patio and pathway cleaning wash in Kings Langley">
+                    <div class="gallery-desc">
+                        <h4>Brick Patio & Pathway Washing</h4>
+                        <p>Stripping away slick biological moss patches and dark lichen, restoring safety and a vibrant finish to entertainment areas.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="lawn-mowing-kings-langley.jpeg" alt="Professional lawn mowing maintenance and grass trimming service in Kings Langley by WestClean">
+                    <div class="gallery-desc">
+                        <h4>Precision Lawn Care</h4>
+                        <p>A pristine, low-profile turf cut scheduled down perfectly to optimize turf health and deliver sharp, clean structural borders.</p>
+                    </div>
+                </div>
+
             </div>
-            
-            <img src="IMG_4708.jpg" alt="Kings Langley Cleaning Project" style="width: 100%; border-radius: 12px; margin-top: 30px;">
         </div>
-    </div>
+    </main>
 
-    <footer style="background: var(--dark); color: white; padding: 60px 0; text-align: center;">
-        <p><strong>WestClean Kings Langley</strong></p>
-        <p>Your Local Property Maintenance Experts — 0403 079 094</p>
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 8px;">WestClean Kings Langley</p>
+            <p style="opacity: 0.7;">Reliable Local Service — 0403 079 094</p>
+        </div>
     </footer>
 
 </body>
