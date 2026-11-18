@@ -72,32 +72,36 @@
                         url('1724127426048-driveway-cleaning.jpg');
             background-size: cover;
             background-position: center;
-            min-height: 700px;
+            min-height: 650px;
             display: flex;
             align-items: center;
             color: var(--white); 
             text-align: center; 
             padding: 60px 20px;
         }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; margin-bottom: 25px; letter-spacing: -1px; }
-        .hero p { font-size: 1.3rem; margin-bottom: 35px; max-width: 800px; margin-inline: auto; opacity: 0.95; }
+        .hero h1 { font-size: clamp(2.3rem, 6vw, 4rem); font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 800px; margin-inline: auto; opacity: 0.95; }
 
         /* BUTTONS */
-        .btn-primary { background: var(--primary-blue); color: var(--bright-yellow); padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; border: none; transition: 0.3s; cursor: pointer; text-align: center; }
-        .btn-secondary { background: var(--white); color: var(--dark); padding: 18px 36px; text-decoration: none; border-radius: 8px; font-weight: 600; margin-left: 12px; display: inline-block; border: 1px solid var(--border-color); transition: 0.3s; text-align: center; }
+        .btn-primary { background: var(--primary-blue); color: var(--bright-yellow); padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; border: none; transition: 0.3s; cursor: pointer; text-align: center; }
+        .btn-secondary { background: var(--white); color: var(--dark); padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; margin-left: 12px; display: inline-block; border: 1px solid var(--border-color); transition: 0.3s; text-align: center; }
+
+        /* SECTIONS PADDING (Adaptive) */
+        .section-padded { padding: 90px 0; }
+        .about-flex { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; }
 
         /* PRICING GRID */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 50px; }
-        .card { background: var(--white); padding: 45px 35px; border-radius: 20px; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary-blue); box-shadow: var(--shadow-md); }
-        .price { font-size: 2.8rem; font-weight: 800; color: var(--primary-blue); margin: 20px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .card { background: var(--white); padding: 40px 30px; border-radius: 20px; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary-blue); box-shadow: var(--shadow-md); }
+        .price { font-size: 2.8rem; font-weight: 800; color: var(--primary-blue); margin: 15px 0; }
 
         /* GALLERY */
         .gallery-container { width: 100%; overflow: hidden; padding: 10px 0; }
         .gallery-grid { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 20px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
         .gallery-grid::-webkit-scrollbar { display: none; }
         .gallery-item { flex: 0 0 85%; max-width: 380px; scroll-snap-align: center; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-md); position: relative; background: #ffffff; cursor: pointer; }
-        .gallery-item img { width: 100%; display: block; height: 320px; object-fit: cover; }
+        .gallery-item img { width: 100%; display: block; height: 300px; object-fit: cover; }
         .gallery-cap { position: absolute; bottom: 15px; left: 15px; background: rgba(255, 255, 255, 0.95); padding: 8px 16px; border-radius: 8px; font-weight: 700; color: var(--dark); font-size: 0.9rem; z-index: 5; }
         .compare-label { position: absolute; top: 15px; right: 15px; background: #7c3aed; color: white; padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; z-index: 5; }
 
@@ -111,12 +115,22 @@
             .gallery-item { flex: none; max-width: 100%; }
         }
 
-        /* CONTACT SECTION */
-        #contact { background: var(--soft-blue); padding: 100px 20px; }
-        .contact-box { max-width: 700px; margin: auto; background: white; padding: 50px; border-radius: 30px; box-shadow: var(--shadow-md); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 18px; margin-bottom: 20px; border: 1px solid var(--border-color); border-radius: 12px; font-size: 1rem; background: #f8fafc; outline: none; font-family: inherit; }
+        /* CONTACT SECTION & FORMS (Mobile Friendly 16px font to prevent iOS zoom) */
+        #contact { background: var(--soft-blue); padding: 90px 20px; }
+        .contact-box { max-width: 700px; margin: auto; background: white; padding: 45px 35px; border-radius: 24px; box-shadow: var(--shadow-md); }
+        .contact-form input, .contact-form textarea, .contact-form select { 
+            width: 100%; 
+            padding: 16px; 
+            margin-bottom: 15px; 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            font-size: 1rem; /* 16px prevents mobile auto-zoom */
+            background: #f8fafc; 
+            outline: none; 
+            font-family: inherit; 
+        }
 
-        footer { background: var(--dark); color: #94a3b8; padding: 80px 20px; text-align: center; }
+        footer { background: var(--dark); color: #94a3b8; padding: 70px 20px; text-align: center; }
 
         /* Mobile Hamburger */
         #menu-toggle {
@@ -131,6 +145,7 @@
             cursor: pointer;
         }
 
+        /* MOBILE RESPONSIVE MEDIA QUERIES */
         @media (max-width: 960px) {
             #menu-toggle { display: block !important; }
             .nav-container { padding: 10px 15px; position: relative; }
@@ -149,12 +164,25 @@
             }
             .nav-cta { display: inline-block !important; margin-top: 10px !important; width: 90%; text-align: center; }
             .btn-primary, .btn-secondary { width: 100%; margin-left: 0; margin-top: 12px; }
-            .about-flex, .location-grid { flex-direction: column; text-align: center; }
-            .contact-box { padding: 30px 20px; }
+            .about-flex, .location-grid { flex-direction: column; text-align: center; gap: 30px; }
+            .contact-box { padding: 25px 20px; }
+            .section-padded { padding: 60px 0; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
+
+    <!-- ПЛАВАЮЩАЯ КНОПКА WHATSAPP -->
+    <a href="https://wa.me/61403079094?text=Hi%20WestClean,%20I'd%20like%20a%20quote%20for%20my%20property." 
+       target="_blank" 
+       style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; width: 55px; height: 55px; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9998; text-decoration: none;"
+       aria-label="Contact via WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.57 6.57 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.558 6.558 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.833-.307-1.585-.977-.585-.522-.979-1.169-1.094-1.366-.114-.197-.012-.304.087-.401.089-.088.197-.232.295-.348.098-.117.132-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.342l-.381-.006c-.133 0-.348.05-.53.248-.183.197-.7.685-.7 1.664 0 .979.715 1.921.814 2.05.098.133 1.404 2.143 3.403 3.008.475.205.846.327 1.137.418.478.152.913.131 1.257.08.384-.058 1.17-.478 1.338-.94.17-.46-.17-.85-.383-.94z"/>
+        </svg>
+    </a>
 
     <div class="top-bar">BEAT ANY QUOTED PRICE — PROFESSIONAL LOCAL SERVICE</div>
 
@@ -179,7 +207,7 @@
     <header id="home" class="hero">
         <div class="container">
             <h1>Expert Driveway Cleaning & Lawn Mowing in Western Sydney</h1>
-            <p style="font-size: 1.4rem; font-weight: 600;">Expert Lawn Mowing & High-Pressure Cleaning</p>
+            <p style="font-size: 1.3rem; font-weight: 600;">Expert Lawn Mowing & High-Pressure Cleaning</p>
             <p>Serving Blacktown, Penrith, and Western Sydney with professional driveway restoration and property maintenance.</p>
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
                 <a href="#contact" class="btn-primary">Book Free Quote Now</a>
@@ -188,14 +216,14 @@
         </div>
     </header>
 
-    <section id="about" style="background: #ffffff; padding: 100px 0;">
-        <div class="container about-flex" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
-            <div style="flex: 1; min-width: 300px;">
-                <img src="Shiny driveway and suburban home.png" alt="WestClean Services" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px #eff6ff;">
+    <section id="about" class="section-padded" style="background: #ffffff;">
+        <div class="container about-flex">
+            <div style="flex: 1; min-width: 280px;">
+                <img src="Shiny driveway and suburban home.png" alt="WestClean Services" style="width: 100%; border-radius: 20px; box-shadow: 15px 15px 0px #eff6ff;">
             </div>
-            <div style="flex: 1; min-width: 300px;">
+            <div style="flex: 1; min-width: 280px;">
                 <h4 style="color: #2563eb; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 10px;">The WestClean Story</h4>
-                <h2 style="font-size: 2.5rem; color: #0f172a; line-height: 1.2; margin-bottom: 20px;">Local Reliability Meets Professional Results</h2>
+                <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); color: #0f172a; line-height: 1.2; margin-bottom: 20px;">Local Reliability Meets Professional Results</h2>
                 <p style="font-size: 1.1rem; margin-bottom: 20px;">Based in Western Sydney, we provide property maintenance you can actually rely on. Whether it’s a high-pressure driveway restoration or a precision lawn mow, we treat every home like it’s our own.</p>
                 <div style="background: #eff6ff; padding: 20px; border-radius: 12px; border-left: 5px solid #2563eb; margin-bottom: 25px;">
                     <h3 style="margin-top: 0; font-size: 1.2rem;">🎁 Loyalty Program</h3>
@@ -215,20 +243,56 @@
         </div>
     </section>
 
-    <section id="pricing" style="padding-bottom: 120px;">
+    <!-- ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР -->
+    <section id="calculator" class="section-padded" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container" style="max-width: 800px; background: #f8fafc; padding: 35px 25px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <h3 style="text-align: center; font-size: clamp(1.8rem, 4vw, 2rem); color: #0f172a; margin-bottom: 10px; font-weight: 800;">Quick Price Estimator</h3>
+            <p style="text-align: center; color: #475569; margin-bottom: 25px;">Select your service to get an instant estimated price.</p>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px;">1. Choose Service:</label>
+                <select id="calcService" onchange="calculatePrice()" class="contact-form" style="margin-bottom: 0;">
+                    <option value="99">Standard Refresh Driveway ($99)</option>
+                    <option value="145">Double Driveway Clean ($145)</option>
+                    <option value="225">Home Hero Bundle ($225)</option>
+                    <option value="300">The Full Reveal - Pre-Sale ($300)</option>
+                    <option value="185">End-of-Lease Special ($185)</option>
+                    <option value="60">Lawn Mowing & Edging ($60+)</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px;">2. Property Type / Add-ons:</label>
+                <select id="calcAddon" onchange="calculatePrice()" class="contact-form" style="margin-bottom: 0;">
+                    <option value="0">Standard Property</option>
+                    <option value="30">Include Extra Pathway (+ $30)</option>
+                    <option value="50">Include Heavy Stains / Oil Treatment (+ $50)</option>
+                </select>
+            </div>
+
+            <div style="background: #eff6ff; padding: 20px; border-radius: 14px; text-align: center; margin-bottom: 25px; border: 1px solid #bfdbfe;">
+                <span style="font-size: 0.95rem; font-weight: 600; color: #1e40af; text-transform: uppercase; letter-spacing: 1px;">Estimated Total:</span>
+                <div id="calcTotal" style="font-size: 2.8rem; font-weight: 900; color: #2563eb; margin-top: 5px;">$99</div>
+            </div>
+
+            <a href="#contact" class="btn-primary" style="display: block; text-align: center; width: 100%;">Book This Service Now</a>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-padded">
         <div class="container">
             <div class="section-title" style="text-align: center;">
-                <h2 style="font-size: 2.5rem; color: var(--dark); font-weight: 800;">Our Services & Packages</h2>
+                <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--dark); font-weight: 800;">Our Services & Packages</h2>
                 <p>Professional results with transparent local pricing.</p>
             </div>
             <div class="grid">
                 <div class="card">
                     <div><h3>Standard Refresh</h3><div class="price">$99</div><p>Perfect for single driveways and front entry paths. High-pressure wash included.</p></div>
-                    <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Book Clean</a>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px; width: 100%;">Book Clean</a>
                 </div>
                 <div class="card">
                     <div><h3>Double Driveway Clean</h3><div class="price">$145</div><p>2-car driveway (up to 50m²), edges trimmed, and full high-pressure wash.</p></div>
-                    <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Book Now</a>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px; width: 100%;">Book Now</a>
                 </div>
                 <div style="border: 3px solid #facc15; border-radius: 20px; padding: 40px 30px; position: relative; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
                     <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #facc15; color: #0f172a; padding: 6px 20px; border-radius: 50px; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; z-index: 10;">
@@ -244,76 +308,31 @@
                             + 2x Wheelie Bins Cleaned FREE!
                         </p>
                     </div>
-                    <a href="#contact" style="display: block; text-align: center; background: #2563eb; color: #ffff00; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.2rem; margin-top: 25px;">
+                    <a href="#contact" style="display: block; text-align: center; background: #2563eb; color: #ffff00; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.1rem; margin-top: 20px;">
                         Claim Offer
                     </a>
                 </div>
                 <div class="card">
                     <div><h3>The Full Reveal</h3><div class="price">$300</div><p><strong>ULTIMATE CARE:</strong> Full Driveway & Pathway Clean, plus a Professional Lawn Mow & Edge.</p></div>
-                    <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Get Quote</a>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px; width: 100%;">Get Quote</a>
                 </div>
                 <div class="card">
                     <div><h3>End-of-Lease Special</h3><div class="price">$185</div><p>Bond-back focused exterior clean. <strong>COMBO:</strong> Get your lawn mowed HALF PRICE!</p></div>
-                    <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Book Special</a>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px; width: 100%;">Book Special</a>
                 </div>
                 <div class="card">
                     <div><h3>Lawn Mowing</h3><div class="price">$60<span>+</span></div><p>Includes precision mowing, edging, and leaf blowing. Counts toward your 10th free service!</p></div>
-                    <a href="#contact" class="btn-primary" style="margin-top:25px; width: 100%;">Book Mow</a>
+                    <a href="#contact" class="btn-primary" style="margin-top:20px; width: 100%;">Book Mow</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Интерактивный калькулятор -->
-<section id="calculator" style="padding: 80px 0; background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
-    <div class="container" style="max-width: 800px; margin: 0 auto; background: #f8fafc; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-        <h3 style="text-align: center; font-size: 2rem; color: #0f172a; margin-bottom: 10px; font-weight: 800;">Quick Price Estimator</h3>
-        <p style="text-align: center; color: #475569; margin-bottom: 30px;">Select your service to get an instant estimated price.</p>
-        
-        <div style="margin-bottom: 25px;">
-            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px;">1. Choose Service:</label>
-            <select id="calcService" onchange="calculatePrice()" style="width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0; font-size: 1rem; background: white; outline: none;">
-                <option value="99">Standard Refresh Driveway ($99)</option>
-                <option value="145">Double Driveway Clean ($145)</option>
-                <option value="225">Home Hero Bundle ($225)</option>
-                <option value="300">The Full Reveal - Pre-Sale ($300)</option>
-                <option value="185">End-of-Lease Special ($185)</option>
-                <option value="60">Lawn Mowing & Edging ($60+)</option>
-            </select>
-        </div>
-
-        <div style="margin-bottom: 30px;">
-            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px;">2. Property Type / Add-ons:</label>
-            <select id="calcAddon" onchange="calculatePrice()" style="width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0; font-size: 1rem; background: white; outline: none;">
-                <option value="0">Standard Property</option>
-                <option value="30">Include Extra Pathway (+ $30)</option>
-                <option value="50">Include Heavy Stains / Oil Treatment (+ $50)</option>
-            </select>
-        </div>
-
-        <div style="background: #eff6ff; padding: 25px; border-radius: 14px; text-align: center; margin-bottom: 30px; border: 1px solid #bfdbfe;">
-            <span style="font-size: 1rem; font-weight: 600; color: #1e40af; text-transform: uppercase; letter-spacing: 1px;">Estimated Total:</span>
-            <div id="calcTotal" style="font-size: 3rem; font-weight: 900; color: #2563eb; margin-top: 5px;">$99</div>
-        </div>
-
-        <a href="#contact" class="btn-primary" style="display: block; text-align: center; width: 100%;">Book This Service Now</a>
-    </div>
-</section>
-
-<!-- Скрипт калькулятора -->
-<script>
-function calculatePrice() {
-    const servicePrice = parseInt(document.getElementById('calcService').value);
-    const addonPrice = parseInt(document.getElementById('calcAddon').value);
-    const total = servicePrice + addonPrice;
-    document.getElementById('calcTotal').innerText = '$' + total;
-}
-</script>
-
-    <section id="gallery" style="background: #f1f5f9; padding: 100px 0;">
+    <!-- ГАЛЕРЕЯ РАБОТ С ССЫЛКОЙ НА projects.html -->
+    <section id="gallery" class="section-padded" style="background: #f1f5f9;">
         <div class="container">
-            <div class="section-title" style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 2.5rem; color: var(--dark); font-weight: 800;">Recent Results</h2>
+            <div class="section-title" style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--dark); font-weight: 800;">Recent Results</h2>
                 <p>Real transformations from our local Western Sydney projects. Tap any photo to enlarge!</p>
             </div>
             <div class="gallery-container">
@@ -335,6 +354,9 @@ function calculatePrice() {
                     </div>
                 </div>
             </div>
+            <div style="text-align: center; margin-top: 35px;">
+                <a href="projects.html" style="display: inline-block; padding: 16px 32px; background-color: transparent; border: 2px solid #2563eb; color: #2563eb; text-decoration: none; border-radius: 12px; font-weight: 700; transition: all 0.3s ease;">View All Before & After Projects →</a>
+            </div>
         </div>
     </section>
 
@@ -343,15 +365,51 @@ function calculatePrice() {
         <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged transformation view">
     </div>
 
-    <section id="contact">
+    <!-- БЛОК ОТЗЫВОВ (REVIEWS) -->
+    <section id="reviews" class="section-padded" style="background-color: #f9f9f9;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 20px;">
+            <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--dark); font-weight: 800; margin-bottom: 30px;">What Our Customers Say</h2>
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-efad9f3d-10e0-492d-8031-ca0c927cc818" data-elfsight-app-lazy></div>
+        </div>
+    </section>
+
+    <!-- СЕРВИСНЫЕ ЗОНЫ И КАРТА -->
+    <section id="areas" class="section-padded" style="background: #ffffff; border-top: 1px solid #e2e8f0;">
+        <div class="container location-grid" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 280px; height: 380px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106103.96791572972!2d150.8407425219965!3d-33.792942407466854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12999e525f0ad9%3A0x5017d681632e1d0!2sBlacktown%20NSW!5e0!3m2!1sen!2sau!4v1716200000000!5m2!1sen!2sau" 
+                    width="100%" height="100%" style="border:0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div style="flex: 1; min-width: 280px;">
+                <h4 style="color: #2563eb; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 10px;">Our Service Area</h4>
+                <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); color: #0f172a; margin-bottom: 20px;">Western Sydney Specialists</h2>
+                <p style="margin-bottom: 25px; font-size: 1.1rem; color: #475569;">Based in Blacktown, we serve all neighboring suburbs with pride. Click a suburb below for local details:</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <a href="baulkham-hills.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Baulkham Hills</a>
+                    <a href="seven-hills.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Seven Hills</a>
+                    <a href="kings-langley.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Kings Langley</a>
+                    <a href="glenmore-park.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Glenmore Park</a>
+                    <a href="the-ponds.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">The Ponds</a>
+                    <a href="penrith.html" style="padding: 10px 18px; background: #eff6ff; border-radius: 50px; text-decoration: none; color: #2563eb; font-weight: 600; border: 1px solid #2563eb; font-size: 0.85rem;">Penrith</a>
+                    <a href="toongabbie.html" style="background: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; color: #0f172a; font-weight: 700; border: 1px solid #e2e8f0; font-size: 0.95rem;">Toongabbie</a>
+                </div>
+                <p style="margin-top: 25px; font-weight: 700; color: #0f172a; font-size: 1.1rem;">Serving all of Western Sydney!</p>
+                <p style="font-size: 0.9rem; color: #64748b;">Blacktown • Stanhope Gardens • Quakers Hill • Schofields • & Surrounds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-padded">
         <div class="container">
-            <div class="section-title" style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 2.5rem; color: var(--dark); font-weight: 800;">Get a Fast and Free Quote</h2>
+            <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--dark); font-weight: 800;">Get a Fast and Free Quote</h2>
                 <p>Most quotes provided instantly via photo!</p>
             </div>
             <div class="contact-box">
-                <a href="https://wa.me/61403079094" style="display: block; background: #6dd47e; color: white; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 700; margin-bottom: 15px; text-align: center;">
-                    WhatsApp Photo to 0403 079 094 for Instant Quote!
+                <a href="https://wa.me/61403079094" style="display: block; background: #25D366; color: white; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: 700; margin-bottom: 20px; text-align: center;">
+                    💬 WhatsApp Photo to 0403 079 094 for Instant Quote!
                 </a>
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                     <input type="hidden" name="access_key" value="0a2b3c7a-d8c2-4499-993d-6bb40772738d">
@@ -366,40 +424,91 @@ function calculatePrice() {
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="section-padded" style="background: #f8fafc; border-top: 1px solid #e2e8f0;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; font-size: clamp(2rem, 4vw, 2.2rem); color: #0f172a; margin-bottom: 40px;">Common Questions</h2>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Do I need to provide anything for the service?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">For pressure washing, we just need access to an <strong>external water tap</strong>. We bring all our own professional-grade hoses, power equipment, and fuel. For lawn mowing, we are 100% self-sufficient.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Do I need to be home during the clean?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">Not at all! As long as we have access to the areas being cleaned and a water tap, many of our customers are at work while we transform their property. We can send you "After" photos via WhatsApp once we finish.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">Are you insured?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">Yes. WestClean is fully insured, giving you total peace of mind while we are working on your property. We treat every home with the utmost care and respect.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2563eb; margin-top: 0; margin-bottom: 10px; font-size: 1.2rem;">How long does a typical driveway clean take?</h4>
+                    <p style="margin-bottom: 0; color: #475569;">Most standard driveways take between <strong>1.5 to 3 hours</strong> depending on the size and the level of buildup. We don't rush—we make sure every stain is addressed before we pack up.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 35px;">
+                <p style="font-weight: 600;">Have another question?</p>
+                <a href="https://wa.me/61403079094" style="color: #2563eb; font-weight: 700; text-decoration: underline;">Message us on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-            <p style="font-size: 1.2rem; margin-bottom: 10px;"><strong>WestClean Driveway & Lawn Care</strong> | Western Sydney NSW</p>
-            <p style="opacity:0.8;">westcleandriveway@gmail.com | 0403 079 094</p>
+            <p style="font-size: 1.1rem; margin-bottom: 8px;"><strong>WestClean Driveway & Lawn Care</strong> | Western Sydney NSW</p>
+            <p style="opacity:0.8; font-size: 0.95rem;">westcleandriveway@gmail.com | 0403 079 094</p>
         </div>
     </footer>
 
+    <!-- СКРИПТЫ -->
+    <script>lucide.createIcons();</script>
+   
     <script>
       const menuToggle = document.getElementById('menu-toggle');
       const navLinks = document.querySelector('.nav-links');
+
       menuToggle.addEventListener('click', () => {
         navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
       });
+
       document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => { if (window.innerWidth <= 960) navLinks.style.display = 'none'; });
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 960) {
+            navLinks.style.display = 'none';
+          }
+        });
       });
 
+      // Калькулятор цен
+      function calculatePrice() {
+          const servicePrice = parseInt(document.getElementById('calcService').value);
+          const addonPrice = parseInt(document.getElementById('calcAddon').value);
+          const total = servicePrice + addonPrice;
+          document.getElementById('calcTotal').innerText = '$' + total;
+      }
+
+      // Лайтбокс галереи
       const lightbox = document.getElementById('customLightbox');
       const lightboxImg = document.getElementById('lightboxImg');
-      document.querySelectorAll('.gallery-item img').forEach(img => {
-        img.addEventListener('click', () => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; });
-      });
-      document.getElementById('closeLightbox').addEventListener('click', () => { lightbox.style.display = 'none'; });
-    </script>
+      const closeLightbox = document.getElementById('closeLightbox');
 
-    <!-- Плавающая кнопка WhatsApp -->
-<a href="https://wa.me/61403079094?text=Hi%20WestClean,%20I'd%20like%20a%20quote%20for%20my%20property." 
-   target="_blank" 
-   style="position: fixed; bottom: 25px; right: 25px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9998; text-decoration: none; transition: transform 0.3s ease;"
-   onmouseover="this.style.transform='scale(1.1)'" 
-   onmouseout="this.style.transform='scale(1)'">
-    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.57 6.57 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.558 6.558 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.833-.307-1.585-.977-.585-.522-.979-1.169-1.094-1.366-.114-.197-.012-.304.087-.401.089-.088.197-.232.295-.348.098-.117.132-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.342l-.381-.006c-.133 0-.348.05-.53.248-.183.197-.7.685-.7 1.664 0 .979.715 1.921.814 2.05.098.133 1.404 2.143 3.403 3.008.475.205.846.327 1.137.418.478.152.913.131 1.257.08.384-.058 1.17-.478 1.338-.94.17-.46-.17-.85-.383-.94z"/>
-    </svg>
-</a>
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'flex'; 
+          lightboxImg.src = img.src;       
+          lightboxImg.alt = img.alt;
+        });
+      });
+
+      closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 </html>
